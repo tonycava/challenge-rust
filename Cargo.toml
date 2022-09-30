@@ -11,3 +11,4 @@ temperature_conv = { path = 'temperature_conv' }
 speed_transformation = { path = 'speed_transformation' }
 looping = { path = 'looping' }
 groceries = { path = 'groceries' }
+reverse_string = { path = 'reverse_string' }

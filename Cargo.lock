@@ -8,6 +8,7 @@ version = "0.1.0"
 dependencies = [
  "groceries",
  "looping",
+ "reverse_string",
  "scalar",
  "speed_transformation",
  "temperature_conv",
@@ -19,6 +20,10 @@ version = "0.1.0"
 
 [[package]]
 name = "looping"
+version = "0.1.0"
+
+[[package]]
+name = "reverse_string"
 version = "0.1.0"
 
 [[package]]

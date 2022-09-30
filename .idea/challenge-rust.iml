@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/groceries/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/looping/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/reverse_string/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/speed_transformation/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/temperature_conv/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
@@ -14,6 +15,7 @@
       <excludeFolder url="file://$MODULE_DIR$/speed_transformation/target" />
       <excludeFolder url="file://$MODULE_DIR$/looping/target" />
       <excludeFolder url="file://$MODULE_DIR$/groceries/target" />
+      <excludeFolder url="file://$MODULE_DIR$/reverse_string/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

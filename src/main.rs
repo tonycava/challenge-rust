@@ -1,16 +1,9 @@
-use groceries::{insert, at_index};
+use reverse_string::rev_str;
 
 fn main() {
-    let mut groceries = vec![
-        "yogurt".to_string(),
-        "panettone".to_string(),
-        "bread".to_string(),
-        "cheese".to_string(),
-    ];
-    insert(&mut groceries, String::from("nuts"));
-    println!("The groceries list contains {:?}", &groceries);
-    println!(
-        "The second element of the grocery  list is {:?}",
-        at_index(&groceries, 1)
-    );
+    println!("{}", rev_str("Hello, world!"));
+    println!("{}", rev_str("Hello, my name is Roman"));
+    println!("{}", rev_str("I have a nice car!"));
+    println!("{}", rev_str("How old are You"));
+    println!("{}", rev_str("ex: this is an example água"));
 }
