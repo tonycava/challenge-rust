@@ -17,3 +17,4 @@ fibonacci2 = { path = 'fibonacci2' }
 matrix_transposition = { path = 'matrix_transposition' }
 division_and_remainder = { path = 'division_and_remainder' }
 tuples_refs = { path = 'tuples_refs' }
+borrow = { path = 'borrow' }

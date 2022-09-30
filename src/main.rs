@@ -1,9 +1,9 @@
-use tuples_refs::*;
+use borrow::*;
 
 fn main() {
-    let student = Student(20, "Pedro".to_string(), "Domingos".to_string());
-    println!("Student: {:?}", student);
-    println!("Student first name: {}", first_name(&student));
-    println!("Student last name: {}", last_name(&student));
-    println!("Student Id: {}", id(&student));
+    let s = "hello";
+    let s1 = "camelCase".to_string();
+
+    println!("\tstr_len(\"{}\") = {}", s, str_len(s));
+    println!("\tstr_len(\"{}\") = {}", s1, str_len(&s1));
 }

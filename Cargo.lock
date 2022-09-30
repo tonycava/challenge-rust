@@ -3,9 +3,14 @@
 version = 3
 
 [[package]]
+name = "borrow"
+version = "0.1.0"
+
+[[package]]
 name = "challenge-rust"
 version = "0.1.0"
 dependencies = [
+ "borrow",
  "division_and_remainder",
  "fibonacci2",
  "find_factorial",
