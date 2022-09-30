@@ -16,6 +16,7 @@ dependencies = [
  "scalar",
  "speed_transformation",
  "temperature_conv",
+ "tuples_refs",
 ]
 
 [[package]]
@@ -56,4 +57,8 @@ version = "0.1.0"
 
 [[package]]
 name = "temperature_conv"
+version = "0.1.0"
+
+[[package]]
+name = "tuples_refs"
 version = "0.1.0"

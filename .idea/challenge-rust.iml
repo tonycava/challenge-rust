@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/reverse_string/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/speed_transformation/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/temperature_conv/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tuples_refs/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/scalar/target" />
       <excludeFolder url="file://$MODULE_DIR$/temperature_conv/target" />
@@ -24,6 +25,7 @@
       <excludeFolder url="file://$MODULE_DIR$/fibonacci2/target" />
       <excludeFolder url="file://$MODULE_DIR$/matrix_transposition/target" />
       <excludeFolder url="file://$MODULE_DIR$/division_and_remainder/target" />
+      <excludeFolder url="file://$MODULE_DIR$/tuples_refs/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
