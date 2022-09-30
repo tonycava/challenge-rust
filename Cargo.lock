@@ -6,6 +6,7 @@ version = 3
 name = "challenge-rust"
 version = "0.1.0"
 dependencies = [
+ "find_factorial",
  "groceries",
  "looping",
  "reverse_string",
@@ -13,6 +14,10 @@ dependencies = [
  "speed_transformation",
  "temperature_conv",
 ]
+
+[[package]]
+name = "find_factorial"
+version = "0.1.0"
 
 [[package]]
 name = "groceries"
