@@ -12,6 +12,7 @@ version = "0.1.0"
 dependencies = [
  "borrow",
  "division_and_remainder",
+ "doubtful",
  "fibonacci2",
  "find_factorial",
  "groceries",
@@ -26,6 +27,10 @@ dependencies = [
 
 [[package]]
 name = "division_and_remainder"
+version = "0.1.0"
+
+[[package]]
+name = "doubtful"
 version = "0.1.0"
 
 [[package]]
