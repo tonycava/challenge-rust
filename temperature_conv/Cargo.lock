@@ -3,17 +3,5 @@
 version = 3
 
 [[package]]
-name = "challenge-rust"
-version = "0.1.0"
-dependencies = [
- "scalar",
- "temperature_conv",
-]
-
-[[package]]
-name = "scalar"
-version = "0.1.0"
-
-[[package]]
 name = "temperature_conv"
 version = "0.1.0"

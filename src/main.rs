@@ -1,6 +1,6 @@
-use scalar::*;
+use temperature_conv::*;
 
 fn main() {
-    println!("rem : {}", rem(22.0, 2.0));// 'rem : 0'
-    println!("rem : {}", rem(-128.23, 2.0));// 'rem : -0.22999573'
+    println!("{} F = {} C", -459.67, fahrenheit_to_celsius(-459.67));
+    println!("{} C = {} F", 0.0, celsius_to_fahrenheit(0.0));
 }
