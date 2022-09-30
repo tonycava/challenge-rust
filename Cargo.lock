@@ -6,10 +6,15 @@ version = 3
 name = "challenge-rust"
 version = "0.1.0"
 dependencies = [
+ "looping",
  "scalar",
  "speed_transformation",
  "temperature_conv",
 ]
+
+[[package]]
+name = "looping"
+version = "0.1.0"
 
 [[package]]
 name = "scalar"
