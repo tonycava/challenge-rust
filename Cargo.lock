@@ -6,6 +6,7 @@ version = 3
 name = "challenge-rust"
 version = "0.1.0"
 dependencies = [
+ "fibonacci2",
  "find_factorial",
  "groceries",
  "looping",
@@ -14,6 +15,10 @@ dependencies = [
  "speed_transformation",
  "temperature_conv",
 ]
+
+[[package]]
+name = "fibonacci2"
+version = "0.1.0"
 
 [[package]]
 name = "find_factorial"
