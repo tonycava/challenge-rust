@@ -10,6 +10,7 @@ dependencies = [
  "find_factorial",
  "groceries",
  "looping",
+ "matrix_transposition",
  "reverse_string",
  "scalar",
  "speed_transformation",
@@ -30,6 +31,10 @@ version = "0.1.0"
 
 [[package]]
 name = "looping"
+version = "0.1.0"
+
+[[package]]
+name = "matrix_transposition"
 version = "0.1.0"
 
 [[package]]

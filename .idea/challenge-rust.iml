@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/find_factorial/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/groceries/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/looping/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/matrix_transposition/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/reverse_string/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/speed_transformation/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/temperature_conv/src" isTestSource="false" />
@@ -20,6 +21,7 @@
       <excludeFolder url="file://$MODULE_DIR$/reverse_string/target" />
       <excludeFolder url="file://$MODULE_DIR$/find_factorial/target" />
       <excludeFolder url="file://$MODULE_DIR$/fibonacci2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/matrix_transposition/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -14,3 +14,4 @@ groceries = { path = 'groceries' }
 reverse_string = { path = 'reverse_string' }
 find_factorial = { path = 'find_factorial' }
 fibonacci2 = { path = 'fibonacci2' }
+matrix_transposition = { path = 'matrix_transposition' }
