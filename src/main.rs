@@ -1,11 +1,9 @@
-use doubtful::*;
+use string_literals::*;
 
 fn main() {
-    let mut s = String::from("Hello");
-
-    println!("Before changing the string: {}", s);
-
-    doubtful(&mut s);
-
-    println!("After changing the string: {}", s);
+    println!("{}", is_empty(""));
+    println!("{}", is_ascii("rust"));
+    println!("{}", contains("rust", "ru"));
+    println!("{:?}", split_at("rust", 2));
+    println!("{}", find("rust", 'u'));
 }

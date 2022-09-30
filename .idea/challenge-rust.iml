@@ -14,7 +14,9 @@
       <sourceFolder url="file://$MODULE_DIR$/matrix_transposition/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/reverse_string/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/speed_transformation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/string_literals/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/temperature_conv/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/to_url/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tuples_refs/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/scalar/target" />
@@ -30,6 +32,8 @@
       <excludeFolder url="file://$MODULE_DIR$/tuples_refs/target" />
       <excludeFolder url="file://$MODULE_DIR$/borrow/target" />
       <excludeFolder url="file://$MODULE_DIR$/doubtful/target" />
+      <excludeFolder url="file://$MODULE_DIR$/to_url/target" />
+      <excludeFolder url="file://$MODULE_DIR$/string_literals/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
