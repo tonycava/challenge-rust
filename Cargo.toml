@@ -24,3 +24,4 @@ name_initials = { path = 'name_initials' }
 ownership = { path = 'ownership' }
 copy = { path = 'copy' }
 borrow_me_the_reference = { path = 'borrow_me_the_reference' }
+tic_tac_toe = { path = 'tic_tac_toe' }

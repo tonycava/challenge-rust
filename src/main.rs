@@ -1,14 +1,29 @@
-use borrow_me_the_reference::{delete_and_backspace, is_correct};
+use tic_tac_toe::*;
 
 fn main() {
-    let mut a = String::from("bpp--o+er+++sskroi-++lcw");;
+    println!(
+        "{:?}",
+        tic_tac_toe(vec![
+            vec!["O", "X", "O"],
+            vec!["O", "O", "X"],
+            vec!["X", "#", "X"]
+        ])
+    );
 
-    let mut b: Vec<&str> = vec!["2+2=4", "3+2=5", "10-3=3", "5+5=10"];
+    println!(
+        "{:?}",
+        tic_tac_toe(vec![
+            vec!["X", "O", "O"],
+            vec!["X", "O", "O"],
+            vec!["#", "O", "X"]
+        ])
+    );
 
-    // - If a value does **not implement Copy**, it must be **borrowed** and so will be passed by **reference**.
-    delete_and_backspace(&mut a); // the reference of  the value
-    let per = is_correct(&mut b); // the reference of  the value
+    let dig = vec![
+        vec!["O", "O", "X"],
+        vec!["O", "X", "O"],
+        vec!["X", "#", "X"]
+    ];
 
-    println!("{:?}", (a, b, per));
-    // output: ("borrow", ["✔", "✔", "✘", "✔"], 75)
+    println!("{:?}",tic_tac_toe(dig));
 }
