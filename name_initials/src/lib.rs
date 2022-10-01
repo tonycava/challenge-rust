@@ -4,12 +4,13 @@ pub fn initials(names: Vec<&str>) -> Vec<String> {
     let mut initias: Vec<String> = vec![];
 
     for name in names.iter() {
+        let s = String::from(*name);
+
         if is_already_initials(*name) {
-            initias.push((*name.to_string()).parse().unwrap());
+            initias.push(s);
             continue;
         }
 
-        let s = String::from(*name);
         let index_of_space = s.find(' ').unwrap();
         let first_letter = s.chars().nth(0).unwrap();
         let second_letter = s.chars().nth(index_of_space + 1).unwrap();

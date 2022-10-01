@@ -19,6 +19,7 @@ dependencies = [
  "looping",
  "matrix_transposition",
  "name_initials",
+ "ownership",
  "reverse_string",
  "scalar",
  "speed_transformation",
@@ -57,6 +58,10 @@ version = "0.1.0"
 
 [[package]]
 name = "name_initials"
+version = "0.1.0"
+
+[[package]]
+name = "ownership"
 version = "0.1.0"
 
 [[package]]
