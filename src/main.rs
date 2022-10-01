@@ -6,6 +6,7 @@ fn main() {
     let c = vec![1, 2, 4, 5];
 
     println!("{:?}", nbr_function(a));
+    println!("{:?}", nbr_function(-12));
     println!("{:?}", str_function(b));
     println!("{:?}", vec_function(c));
 }
