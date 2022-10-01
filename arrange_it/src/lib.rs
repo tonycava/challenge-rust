@@ -1,4 +1,5 @@
 pub fn arrange_phrase(phrase: &str) -> String {
+    println!("{}", phrase);
     let list_of_word: Vec<&str> = phrase.split(" ").collect();
     let mut to_return = String::new();
     let mut vec: Vec<usize> = Vec::new();
