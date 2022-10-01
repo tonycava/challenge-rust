@@ -22,3 +22,4 @@ doubtful = { path = 'doubtful' }
 string_literals = { path = 'string_literals' }
 name_initials = { path = 'name_initials' }
 ownership = { path = 'ownership' }
+copy = { path = 'copy' }

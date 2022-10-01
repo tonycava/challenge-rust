@@ -1,4 +1,4 @@
-pub fn first_subword(mut s: String) -> String {
+pub fn first_subword(s: String) -> String {
     for (idx, letter) in s.chars().enumerate() {
         if letter.is_uppercase() && idx != 0 {
             return s[0..idx].to_string()
@@ -7,5 +7,5 @@ pub fn first_subword(mut s: String) -> String {
             return s[0..idx].to_string()
         }
     }
-    return s;
+    s.to_string()
 }

@@ -11,6 +11,7 @@ name = "challenge-rust"
 version = "0.1.0"
 dependencies = [
  "borrow",
+ "copy",
  "division_and_remainder",
  "doubtful",
  "fibonacci2",
@@ -27,6 +28,10 @@ dependencies = [
  "temperature_conv",
  "tuples_refs",
 ]
+
+[[package]]
+name = "copy"
+version = "0.1.0"
 
 [[package]]
 name = "division_and_remainder"

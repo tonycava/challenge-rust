@@ -1,13 +1,11 @@
-use ownership::first_subword;
+use copy::*;
 
 fn main() {
-    let s1 = String::from("helloWorld");
-    let s2 = String::from("snake_case");
-    let s3 = String::from("CamelCase");
-    let s4 = String::from("just");
+    let a: i32 = 0;
+    let b = String::from("1 2 4 5 6");
+    let c = vec![1, 2, 4, 5];
 
-    println!("first_subword({}) = {}", s1.clone(), first_subword(s1));
-    println!("first_subword({}) = {}", s2.clone(), first_subword(s2));
-    println!("first_subword({}) = {}", s3.clone(), first_subword(s3));
-    println!("first_subword({}) = {}", s4.clone(), first_subword(s4));
+    println!("{:?}", nbr_function(a));
+    println!("{:?}", str_function(b));
+    println!("{:?}", vec_function(c));
 }

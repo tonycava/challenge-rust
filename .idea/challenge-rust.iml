@@ -19,6 +19,7 @@
       <sourceFolder url="file://$MODULE_DIR$/temperature_conv/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/to_url/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tuples_refs/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/copy/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ownership/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/scalar/target" />
@@ -38,6 +39,7 @@
       <excludeFolder url="file://$MODULE_DIR$/string_literals/target" />
       <excludeFolder url="file://$MODULE_DIR$/name_initials/target" />
       <excludeFolder url="file://$MODULE_DIR$/ownership/target" />
+      <excludeFolder url="file://$MODULE_DIR$/copy/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
