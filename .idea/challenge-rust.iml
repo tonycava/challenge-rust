@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/groceries/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/looping/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/matrix_transposition/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/name_initials/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/reverse_string/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/speed_transformation/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/string_literals/src" isTestSource="false" />
@@ -34,6 +35,7 @@
       <excludeFolder url="file://$MODULE_DIR$/doubtful/target" />
       <excludeFolder url="file://$MODULE_DIR$/to_url/target" />
       <excludeFolder url="file://$MODULE_DIR$/string_literals/target" />
+      <excludeFolder url="file://$MODULE_DIR$/name_initials/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

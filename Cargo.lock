@@ -18,6 +18,7 @@ dependencies = [
  "groceries",
  "looping",
  "matrix_transposition",
+ "name_initials",
  "reverse_string",
  "scalar",
  "speed_transformation",
@@ -52,6 +53,10 @@ version = "0.1.0"
 
 [[package]]
 name = "matrix_transposition"
+version = "0.1.0"
+
+[[package]]
+name = "name_initials"
 version = "0.1.0"
 
 [[package]]
