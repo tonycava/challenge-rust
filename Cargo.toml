@@ -23,3 +23,4 @@ string_literals = { path = 'string_literals' }
 name_initials = { path = 'name_initials' }
 ownership = { path = 'ownership' }
 copy = { path = 'copy' }
+borrow_me_the_reference = { path = 'borrow_me_the_reference' }

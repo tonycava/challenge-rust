@@ -7,10 +7,15 @@ name = "borrow"
 version = "0.1.0"
 
 [[package]]
+name = "borrow_me_the_reference"
+version = "0.1.0"
+
+[[package]]
 name = "challenge-rust"
 version = "0.1.0"
 dependencies = [
  "borrow",
+ "borrow_me_the_reference",
  "copy",
  "division_and_remainder",
  "doubtful",
