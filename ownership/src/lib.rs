@@ -1,5 +1,3 @@
-use std::process::id;
-
 pub fn first_subword(mut s: String) -> String {
     for (idx, letter) in s.chars().enumerate() {
         if letter.is_uppercase() && idx != 0 {
