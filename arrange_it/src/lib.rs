@@ -5,7 +5,8 @@ pub fn arrange_phrase(phrase: &str) -> String {
 
 
     for i in 1..list_of_word.len() + 1 {
-        vec.push(list_of_word.iter().position(|&r| r.contains(&i.to_string())).unwrap())
+        let condition = i.to_string();
+        vec.push(list_of_word.iter().position(|&r| r.contains(&condition)).unwrap())
     }
 
     for i in vec.iter() {
