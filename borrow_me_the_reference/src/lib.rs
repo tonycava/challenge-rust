@@ -8,15 +8,15 @@ pub fn delete_and_backspace(s: &mut String) {
             s.remove(idx - 1);
             idx = 0;
         } else if char == '+' && idx < s.len() {
-            let mut passHere = false;
+            let mut pass_here = false;
             s.remove(idx);
 
             while s.chars().nth(idx).unwrap() == '+' {
-                passHere = true;
+                pass_here = true;
                 idx += 1;
             }
 
-            if passHere {
+            if pass_here {
                 s.remove(idx + 1);
             } else {
                 s.remove(idx);

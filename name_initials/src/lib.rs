@@ -1,5 +1,3 @@
-use std::fmt::format;
-
 pub fn initials(names: Vec<&str>) -> Vec<String> {
     let mut initias: Vec<String> = vec![];
 
