@@ -1,5 +1,6 @@
+use std::fmt::format;
+
 pub fn arrange_phrase(phrase: &str) -> String {
-    println!("{}", phrase);
     let list_of_word: Vec<&str> = phrase.split(" ").collect();
     let mut to_return = String::new();
     let mut vec: Vec<usize> = Vec::new();
@@ -9,8 +10,8 @@ pub fn arrange_phrase(phrase: &str) -> String {
     }
 
     for i in vec.iter() {
-        to_return += list_of_word[*i];
-        to_return += " ";
+        let word: String = list_of_word[*i].chars().filter(|c| !c.is_digit(10)).collect();
+        to_return += &format!("{} ", word);
     }
 
     return to_return.trim().to_string();
