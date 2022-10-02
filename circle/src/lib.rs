@@ -41,10 +41,20 @@ impl Circle {
         self.radius * 2.0
     }
 
-    pub fn intersect(self, other: &Circle) -> bool {
-        if self.center.x + self.radius < other.center.x + other.radius && self.center.y + self.radius < other.center.y + other.radius {
+    pub fn intersect(&self, other: &Circle) -> bool {
+        let d = ((self.center.x - other.center.x) * (self.center.x - other.center.x)
+            + (self.center.y - other.center.y) * (self.center.y - other.center.y)).sqrt();
+
+        if d <= self.radius - other.radius {
+            return true;
+        } else if d <= other.radius - self.radius {
+            return true;
+        } else if d < self.radius + other.radius {
+            return true;
+        } else if d == self.radius + other.radius {
             return true;
         }
+
         return false;
     }
 }
