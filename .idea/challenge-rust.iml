@@ -24,6 +24,7 @@
       <sourceFolder url="file://$MODULE_DIR$/copy/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ownership/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tic_tac_toe/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/changes/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/scalar/target" />
       <excludeFolder url="file://$MODULE_DIR$/temperature_conv/target" />
@@ -46,6 +47,7 @@
       <excludeFolder url="file://$MODULE_DIR$/borrow_me_the_reference/target" />
       <excludeFolder url="file://$MODULE_DIR$/tic_tac_toe/target" />
       <excludeFolder url="file://$MODULE_DIR$/arrange_it/target" />
+      <excludeFolder url="file://$MODULE_DIR$/changes/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -9,5 +9,6 @@ fn main() {
     ];
     println!("brightness = {}", lights[0].brightness);
     change_brightness(&mut lights, "living_room", 200);
+    change_brightness(&mut lights, "bed", 200);
     println!("new brightness = {}", lights[0].brightness);
 }
