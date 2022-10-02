@@ -6,7 +6,7 @@ pub struct Card {
     pub rank: Rank,
 }
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq)]
 pub enum Suit {
     Heart,
     Diamond,
@@ -14,7 +14,7 @@ pub enum Suit {
     Club,
 }
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq)]
 pub enum Rank {
     Ace,
     King,
@@ -25,7 +25,6 @@ pub enum Rank {
 impl Suit {
     pub fn random() -> Suit {
         let mut rng = rand::thread_rng().gen_range(1, 4);
-        println!("{} rng", rng);
         match rng {
             1 => Suit::Heart,
             2 => Suit::Diamond,
@@ -50,11 +49,7 @@ impl Suit {
 
 impl Rank {
     pub fn random() -> Rank {
-        // let which_rank: u8 = Range::new(1, 4);
-        // let which_number: u8 = Range::new(0, 10);
         let mut which_rank = rand::thread_rng().gen_range(1, 4);
-        let mut which_number = rand::thread_rng().gen_range(2, 10);
-
         match which_rank {
             1 => Rank::Ace,
             2 => Rank::King,
@@ -77,7 +72,7 @@ impl Rank {
     }
 }
 
-pub fn winner_card(card: Card) -> bool {
+pub fn winner_card(card: &Card) -> bool {
     if card.rank.get_rank() == &Rank::Ace && card.suit.get_suit() == &Suit::Spade {
         return true;
     }
