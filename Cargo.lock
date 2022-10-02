@@ -22,6 +22,7 @@ dependencies = [
  "borrow",
  "borrow_me_the_reference",
  "changes",
+ "circle",
  "copy",
  "division_and_remainder",
  "doubtful",
@@ -43,6 +44,10 @@ dependencies = [
 
 [[package]]
 name = "changes"
+version = "0.1.0"
+
+[[package]]
+name = "circle"
 version = "0.1.0"
 
 [[package]]
