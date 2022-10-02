@@ -28,3 +28,4 @@ tic_tac_toe = { path = 'tic_tac_toe' }
 arrange_it = { path = 'arrange_it' }
 changes = { path = 'changes' }
 circle = { path = 'circle' }
+card_deck = { path = 'card_deck' }

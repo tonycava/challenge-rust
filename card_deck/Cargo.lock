@@ -3,18 +3,6 @@
 version = 3
 
 [[package]]
-name = "arrange_it"
-version = "0.1.0"
-
-[[package]]
-name = "borrow"
-version = "0.1.0"
-
-[[package]]
-name = "borrow_me_the_reference"
-version = "0.1.0"
-
-[[package]]
 name = "card_deck"
 version = "0.1.0"
 dependencies = [
@@ -28,63 +16,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
-name = "challenge-rust"
-version = "0.1.0"
-dependencies = [
- "arrange_it",
- "borrow",
- "borrow_me_the_reference",
- "card_deck",
- "changes",
- "circle",
- "copy",
- "division_and_remainder",
- "doubtful",
- "fibonacci2",
- "find_factorial",
- "groceries",
- "looping",
- "matrix_transposition",
- "name_initials",
- "ownership",
- "reverse_string",
- "scalar",
- "speed_transformation",
- "string_literals",
- "temperature_conv",
- "tic_tac_toe",
- "tuples_refs",
-]
-
-[[package]]
-name = "changes"
-version = "0.1.0"
-
-[[package]]
-name = "circle"
-version = "0.1.0"
-
-[[package]]
-name = "copy"
-version = "0.1.0"
-
-[[package]]
-name = "division_and_remainder"
-version = "0.1.0"
-
-[[package]]
-name = "doubtful"
-version = "0.1.0"
-
-[[package]]
-name = "fibonacci2"
-version = "0.1.0"
-
-[[package]]
-name = "find_factorial"
-version = "0.1.0"
-
-[[package]]
 name = "getrandom"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -96,30 +27,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "groceries"
-version = "0.1.0"
-
-[[package]]
 name = "libc"
 version = "0.2.134"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "329c933548736bc49fd575ee68c89e8be4d260064184389a5b77517cddd99ffb"
-
-[[package]]
-name = "looping"
-version = "0.1.0"
-
-[[package]]
-name = "matrix_transposition"
-version = "0.1.0"
-
-[[package]]
-name = "name_initials"
-version = "0.1.0"
-
-[[package]]
-name = "ownership"
-version = "0.1.0"
 
 [[package]]
 name = "ppv-lite86"
@@ -156,34 +67,6 @@ checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 dependencies = [
  "getrandom",
 ]
-
-[[package]]
-name = "reverse_string"
-version = "0.1.0"
-
-[[package]]
-name = "scalar"
-version = "0.1.0"
-
-[[package]]
-name = "speed_transformation"
-version = "0.1.0"
-
-[[package]]
-name = "string_literals"
-version = "0.1.0"
-
-[[package]]
-name = "temperature_conv"
-version = "0.1.0"
-
-[[package]]
-name = "tic_tac_toe"
-version = "0.1.0"
-
-[[package]]
-name = "tuples_refs"
-version = "0.1.0"
 
 [[package]]
 name = "wasi"
