@@ -19,5 +19,5 @@ pub fn change_brightness(lights: &mut Vec<Light>, alias: &str, value: u8) {
     println!("{}", value);
 
     let pos = lights.iter().position(|r| r.alias == alias).unwrap_or_else(|| 0);
-    lights[pos].brightness = value;
+    lights[pos].brightness = 20;
 }
