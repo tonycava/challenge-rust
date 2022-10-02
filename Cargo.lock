@@ -21,6 +21,7 @@ dependencies = [
  "arrange_it",
  "borrow",
  "borrow_me_the_reference",
+ "changes",
  "copy",
  "division_and_remainder",
  "doubtful",
@@ -39,6 +40,10 @@ dependencies = [
  "tic_tac_toe",
  "tuples_refs",
 ]
+
+[[package]]
+name = "changes"
+version = "0.1.0"
 
 [[package]]
 name = "copy"

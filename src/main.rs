@@ -1,6 +1,13 @@
-use arrange_it::*;
+use changes::*;
 
 fn main() {
-    println!("{:?}", arrange_phrase("is2 Thi1s T4est 3a"));
-    println!("{:?}", arrange_phrase("4of Fo1r pe6ople g3ood th5e the2"));
+    // bedroom
+    let mut lights = vec![
+        Light::new("living_room"),
+        Light::new("bedroom"),
+        Light::new("rest_room"),
+    ];
+    println!("brightness = {}", lights[0].brightness);
+    change_brightness(&mut lights, "living_room", 200);
+    println!("new brightness = {}", lights[0].brightness);
 }
