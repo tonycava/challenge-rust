@@ -73,7 +73,7 @@ impl Rank {
 }
 
 pub fn winner_card(card: &Card) -> bool {
-    if card.rank.get_rank() == &Rank::Ace && card.suit.get_suit() == &Suit::Spade {
+    if card.rank.eq(&Rank::Ace) && card.suit.get_suit() == &Suit::Spade {
         return true;
     }
     return false;

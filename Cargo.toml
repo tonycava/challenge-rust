@@ -29,3 +29,4 @@ arrange_it = { path = 'arrange_it' }
 changes = { path = 'changes' }
 circle = { path = 'circle' }
 card_deck = { path = 'card_deck' }
+arrays = { path = 'arrays' }
