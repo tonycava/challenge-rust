@@ -1,7 +1,5 @@
-use std::iter::Sum;
-
-pub fn sum<T>(a: T) -> i32 where T: Iterator, i32: Sum<<T as Iterator>::Item> {
-    return a.into_iter().sum();
+pub fn sum(x: &[i32; 10]) -> i32  {
+    return x.iter().sum();
 }
 
 pub fn thirtytwo_tens() -> [i32; 32] {
