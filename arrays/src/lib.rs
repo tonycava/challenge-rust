@@ -1,5 +1,4 @@
 pub fn sum(x: &[i32]) -> i32 {
-
     x.iter().sum()
 }
 
