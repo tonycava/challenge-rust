@@ -24,20 +24,14 @@ pub fn title_case(input: &str) -> String {
 }
 
 pub fn change_case(input: &str) -> String {
-    let allWords: Vec<&str> = input.split(" ").collect();
     let mut out: Vec<String> = Vec::new();
-
-    for word in allWords.iter() {
-        let firstChar = word.chars().nth(0).unwrap();
-
-        if firstChar.is_lowercase() {
-            out.push(capitalize_first(word));
+    for word in input.chars() {
+        println!("{}", word);
+        if word.is_uppercase() {
+            out.push(word.to_lowercase().to_string());
             continue;
         }
-        let mut allString = String::from(*word);
-        allString.remove(0);
-        out.push(firstChar.to_lowercase().to_string() + &allString);
-
+        out.push(word.to_uppercase().to_string())
     }
-    return out.join(" ");
+    return out.join("");
 }
