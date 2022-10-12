@@ -1,4 +1,7 @@
 pub fn capitalize_first(input: &str) -> String {
+    if input == "" {
+        return "".to_string();
+    }
     let firstChars = input.chars().nth(0).unwrap();
     if firstChars.is_uppercase() {
         return input.to_string();
@@ -10,6 +13,9 @@ pub fn capitalize_first(input: &str) -> String {
 }
 
 pub fn title_case(input: &str) -> String {
+    if input == "" {
+        return "".to_string();
+    }
     let allWords: Vec<&str> = input.split(" ").collect();
     let mut out: Vec<String> = Vec::new();
     for word in allWords.iter() {
@@ -24,6 +30,9 @@ pub fn title_case(input: &str) -> String {
 }
 
 pub fn change_case(input: &str) -> String {
+    if input == "" {
+        return "".to_string();
+    }
     let mut out: Vec<String> = Vec::new();
     for word in input.chars() {
         println!("{}", word);
