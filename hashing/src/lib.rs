@@ -9,11 +9,14 @@ pub fn mean(list: &Vec<i32>) -> f64 {
 }
 
 pub fn median(list: &Vec<i32>) -> i32 {
-    if list.len() % 2 == 0 {
-        let test = (list[list.len() / 2 - 1] + list[list.len() / 2]) as f64 / 2.0 as f64;
-        return test.floor() as i32;
+    if (list.len() % 2)==0 {
+        let ind_left = list.len()/2-1;
+        let ind_right = list.len()/2 ;
+        (list[ind_left]+list[ind_right]) as i32 / 2 as i32
+
+    } else {
+        list[(list.len()/2)] as i32
     }
-    return list[list.len() / 2];
 }
 
 pub fn mode(list: &Vec<i32>) -> i32 {
