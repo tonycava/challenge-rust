@@ -9,6 +9,7 @@ pub fn mean(list: &Vec<i32>) -> f64 {
 }
 
 pub fn median(list: &Vec<i32>) -> i32 {
+    println!("{:?}", list);
     if (list.len() % 2)==0 {
         let ind_left = list.len()/2-1;
         let ind_right = list.len()/2 ;
