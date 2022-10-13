@@ -46,6 +46,7 @@ dependencies = [
  "card_deck",
  "changes",
  "circle",
+ "collect",
  "copy",
  "division_and_remainder",
  "doubtful",
@@ -75,6 +76,10 @@ version = "0.1.0"
 
 [[package]]
 name = "circle"
+version = "0.1.0"
+
+[[package]]
+name = "collect"
 version = "0.1.0"
 
 [[package]]
