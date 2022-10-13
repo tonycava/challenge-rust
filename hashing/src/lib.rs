@@ -13,7 +13,8 @@ pub fn median(list: &Vec<i32>) -> i32 {
     srtd.sort();
 
     if list.len() % 2 == 0 {
-        return (srtd[list.len() / 2 - 1] + list[list.len() / 2]) / 2;
+        let test: f64 = srtd[list.len() / 2 - 1] as f64 + list[list.len() / 2] as f64 / 2 as f64;
+        return test.ceil() as i32;
     }
     return srtd[list.len() / 2];
 }
