@@ -1,12 +1,9 @@
-use string_permutation::*;
+use hashing::*;
 
 fn main() {
-	let word = "thought";
-	let word1 = "thougth";
-	println!(
-		"Is `{}` a permutation of `{}`? = {}",
-		word,
-		word1,
-		is_permutation(word, word1)
-    );
+    println!("Hello, world!");
+    let v = vec![4, 7, 5, 2, 5, 1, 3];
+    println!("mean {}", hashing::mean(&v));
+    println!("median {}", hashing::median(&v));
+    println!("mode {}", hashing::mode(&v));
 }
