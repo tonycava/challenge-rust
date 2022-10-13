@@ -62,6 +62,7 @@ dependencies = [
  "simple_hash",
  "speed_transformation",
  "string_literals",
+ "string_permutation",
  "temperature_conv",
  "tic_tac_toe",
  "tuples_refs",
@@ -196,6 +197,10 @@ version = "0.1.0"
 
 [[package]]
 name = "string_literals"
+version = "0.1.0"
+
+[[package]]
+name = "string_permutation"
 version = "0.1.0"
 
 [[package]]

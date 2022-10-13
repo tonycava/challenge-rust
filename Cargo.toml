@@ -32,3 +32,4 @@ capitalizing = { path = 'capitalizing' }
 edit_distance = { path = 'edit_distance' }
 simple_hash = { path = 'simple_hash' }
 bigger = { path = 'bigger' }
+string_permutation = { path = 'string_permutation' }
