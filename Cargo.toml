@@ -31,3 +31,4 @@ circle = { path = 'circle' }
 card_deck = { path = 'card_deck' }
 arrays = { path = 'arrays' }
 capitalizing = { path = 'capitalizing' }
+edit_distance = { path = 'edit_distance' }
