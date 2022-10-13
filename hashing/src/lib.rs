@@ -9,14 +9,11 @@ pub fn mean(list: &Vec<i32>) -> f64 {
 }
 
 pub fn median(list: &Vec<i32>) -> i32 {
-    let mut srtd = list.clone();
-    srtd.sort();
-
     if list.len() % 2 == 0 {
-        let test: f64 = srtd[list.len() / 2 - 1] as f64 + list[list.len() / 2] as f64 / 2 as f64;
-        return test.ceil() as i32;
+        let test = (list[list.len() / 2 - 1] + list[list.len() / 2]) as f64 / 2.0 as f64;
+        return test.floor() as i32;
     }
-    return srtd[list.len() / 2];
+    return list[list.len() / 2];
 }
 
 pub fn mode(list: &Vec<i32>) -> i32 {
