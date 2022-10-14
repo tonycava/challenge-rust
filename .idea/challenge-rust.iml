@@ -28,6 +28,9 @@
       <sourceFolder url="file://$MODULE_DIR$/circle/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/card_deck/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/arrays/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/strings/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/capitalizing/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/edit_distance/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/scalar/target" />
       <excludeFolder url="file://$MODULE_DIR$/temperature_conv/target" />
@@ -54,6 +57,9 @@
       <excludeFolder url="file://$MODULE_DIR$/circle/target" />
       <excludeFolder url="file://$MODULE_DIR$/card_deck/target" />
       <excludeFolder url="file://$MODULE_DIR$/arrays/target" />
+      <excludeFolder url="file://$MODULE_DIR$/strings/target" />
+      <excludeFolder url="file://$MODULE_DIR$/capitalizing/target" />
+      <excludeFolder url="file://$MODULE_DIR$/edit_distance/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

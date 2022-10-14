@@ -1,11 +1,16 @@
-use hashing::*;
+use unwrap_or_expect::*;
 
 fn main() {
-    println!("Hello, world!");
-    let v = vec![2, 1, 5, 2, 7, 4];
-    let b = vec![1, 7, 5, 5, 6, 4];
-    let u = vec![4, 7, 5, 2, 5, 1, 3];
-    println!("median {}", hashing::median(&v));
-    println!("median {}", hashing::median(&b));
-    println!("median {}", hashing::median(&u));
+    println!("{}", fetch_data(Ok("server1.com".to_string()), Security::Medium));
+    println!("{}", fetch_data(Err(String::new()), Security::Medium));
+    println!("{}", fetch_data(Err("server2.com".to_string()), Security::Low));
+
+    // Panics with no custom message
+    // fetch_data(Err("ERROR CRITICAL".to_string()), Security::Unknown);
+
+    // Panics with the message "ERROR: program stops"
+    // fetch_data(Err(String::new()), Security::High);
+
+    // Panics with the message "malicious_server.com"
+    // fetch_data(Ok("malicious_server.com".to_string()), Security::BlockServer);
 }
