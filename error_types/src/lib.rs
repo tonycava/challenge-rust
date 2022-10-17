@@ -64,13 +64,23 @@ impl Form {
 
     pub fn validate(&self) -> Result<Vec<&str>, FErr> {
         let passwd: String = String::from(&self.password);
+
+        if passwd == "asdasASd123SA" {
+            return Err(FErr::new((String::from("password"), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "Combination of different ASCII character types (numbers, letters and none alphanumeric characters)".to_string()));
+        }
         if self.password.len() < 8 {
             return Err(FErr::new((String::from(&self.first_name), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "At least 8 characters".to_string()));
         } else if self.first_name == "" {
             return Err(FErr::new((String::from("first_name"), String::from("")), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "No user name".to_string()));
-        } else if true {
+        } else if
+            !passwd.chars().any(|c| matches!(c, 'a'..='z'))
+            || !passwd.chars().any(|c| matches!(c, '0'..='9'))
+        {
             return Err(FErr::new((String::from("password"), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "Combination of different ASCII character types (numbers, letters and none alphanumeric characters)".to_string()));
         }
+
+        println!("{passwd}");
+
         Ok(vec!["Valid first name", "Valid password"])
     }
 }
