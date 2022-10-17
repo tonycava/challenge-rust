@@ -1,0 +1,16 @@
+use std::fs;
+use std::fs::File;
+use std::io::{Read, Write};
+use std::ptr::null;
+
+pub fn open_or_create(file: &str, content: &str) {
+    let str = fs::read_to_string(file).unwrap();
+    if str != "" {
+        println!("{str}");
+        return;
+    }
+    File::create(file)
+        .expect("Error while creating the file")
+        .write_all(content.as_bytes())
+        .expect("Error while writing to file");
+}

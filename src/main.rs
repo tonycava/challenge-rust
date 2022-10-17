@@ -1,16 +1,15 @@
 use std::fs::File;
-use std::fs;
-use panic::*;
+use std::io::Read;
+use handling::*;
 
 fn main() {
-    let filename = "created.txt";
-    File::create(filename).unwrap();
+    let path = "a.txt";
+    File::create(path).unwrap();
+    open_or_create(path, "content to be written");
 
-    let a = open_file(filename);
-    println!("{:?}", a);
+    let mut file = File::open(path).unwrap();
 
-    fs::remove_file(filename).unwrap();
-
-    //It must panic
-    let b = open_file(filename);
+    let mut s = String::new();
+    file.read_to_string(&mut s).unwrap();
+    println!("{}", s);
 }
