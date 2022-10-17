@@ -1,4 +1,5 @@
 pub use chrono::{Utc, NaiveDate};
+use regex::Regex;
 
 #[derive(Debug, Eq, PartialEq)]
 pub struct FErr {
@@ -69,9 +70,7 @@ impl Form {
             return Err(FErr::new((String::from("password"), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "At least 8 characters".to_string()));
         } else if self.first_name == "" {
             return Err(FErr::new((String::from("first_name"), String::from("")), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "No user name".to_string()));
-        } else if
-        !passwd.chars().any(|c| matches!(c, 'a'..='z'))
-            || !passwd.chars().any(|c| matches!(c, '0'..='9'))
+        } else if is_bad_passwd(&passwd)
         {
             return Err(FErr::new((String::from(&self.first_name), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "Combination of different ASCII character types (numbers, letters and none alphanumeric characters)".to_string()));
         }
@@ -83,13 +82,13 @@ impl Form {
     }
 }
 
-// fn is_bad_passwd(passwd: &String) -> bool {
-//     let nbr = Regex::new(r"[0-9]").unwrap();
-//     let letter = Regex::new(r"[A-Za-z]").unwrap();
-//     let syb = Regex::new(r"[\(_<>&/\\]").unwrap();
-//
-//     if nbr.is_match(&passwd) && letter.is_match(&passwd) && syb.is_match(&passwd) {
-//         return false
-//     }
-//     true
-// }
+fn is_bad_passwd(passwd: &String) -> bool {
+    let nbr = Regex::new(r"[0-9]").unwrap();
+    let letter = Regex::new(r"[A-Za-z]").unwrap();
+    let syb = Regex::new(r"[\(_<>&/\\]").unwrap();
+
+    if nbr.is_match(&passwd) && letter.is_match(&passwd) && syb.is_match(&passwd) {
+        return false;
+    }
+    true
+}
