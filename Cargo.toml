@@ -41,3 +41,4 @@ handling = { path = 'handling' }
 profanity_filter = { path = 'profanity_filter' }
 question_mark = { path = 'question_mark' }
 banner = { path = 'banner' }
+cipher = { path = 'cipher' }

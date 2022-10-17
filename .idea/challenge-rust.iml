@@ -35,6 +35,7 @@
       <sourceFolder url="file://$MODULE_DIR$/profanity_filter/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/question_mark/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/banner/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cipher/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/scalar/target" />
       <excludeFolder url="file://$MODULE_DIR$/temperature_conv/target" />
@@ -68,6 +69,7 @@
       <excludeFolder url="file://$MODULE_DIR$/profanity_filter/target" />
       <excludeFolder url="file://$MODULE_DIR$/question_mark/target" />
       <excludeFolder url="file://$MODULE_DIR$/banner/target" />
+      <excludeFolder url="file://$MODULE_DIR$/cipher/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
