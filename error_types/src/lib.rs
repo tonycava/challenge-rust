@@ -64,7 +64,6 @@ impl Form {
         if passwd == "asdasASd123SA" {
             return Err(FErr::new((String::from("password"), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "Combination of different ASCII character types (numbers, letters and none alphanumeric characters)".to_string()));
         }
-
         if self.password.len() < 8 {
             return Err(FErr::new((String::from("password"), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "At least 8 characters".to_string()));
         } else if self.first_name == "" {
@@ -73,7 +72,7 @@ impl Form {
         !passwd.chars().any(|c| matches!(c, 'a'..='z'))
             || !passwd.chars().any(|c| matches!(c, '0'..='9'))
         {
-            return Err(FErr::new((String::from(&self.first_name), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "Combination of different ASCII character types (numbers, letters and none alphanumeric characters)".to_string()));
+            return Err(FErr::new((String::from("password"), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "Combination of different ASCII character types (numbers, letters and none alphanumeric characters)".to_string()));
         }
 
         println!("{passwd}");
