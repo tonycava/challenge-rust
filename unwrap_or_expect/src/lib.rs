@@ -11,7 +11,7 @@ pub fn fetch_data(server: Result<String, String>, security_level: Security) -> S
         match security_level {
             Security::Unknown => panic!("called `Result::unwrap()` on an `Err` value: \"ERROR CRITICAL\""),
             Security::BlockServer => panic!("ERROR: program stops"),
-            Security::Low => panic!("Not found: [SERVER_URL]"),
+            Security::Low => panic!("Not found: {}", server.clone().err().unwrap_or("".to_string())),
             Security::Medium => panic!("WARNING: check the server"),
             Security::High => panic!("ERROR: program stops"),
         }
