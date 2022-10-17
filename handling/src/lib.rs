@@ -4,7 +4,7 @@ use std::io::{Read, Write};
 use std::ptr::null;
 
 pub fn open_or_create(file: &str, content: &str) {
-    let str = fs::read_to_string(file).unwrap();
+    let str = fs::read_to_string(file).unwrap_or("".to_string());
     if str != "" {
         println!("{str}");
         return;
