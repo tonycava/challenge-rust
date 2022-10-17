@@ -5,9 +5,8 @@ pub enum Security {
     Low,
     BlockServer,
 }
-
 pub fn fetch_data(server: Result<String, String>, security_level: Security) -> String {
-    if server.clone().err().unwrap_or("".to_string()) != "" {
+    if server.clone().err() != None {
         return match security_level {
             Security::Unknown => panic!("called `Result::unwrap()` on an `Err` value: \"ERROR CRITICAL\""),
             Security::BlockServer => panic!("ERROR: program stops"),
@@ -16,6 +15,5 @@ pub fn fetch_data(server: Result<String, String>, security_level: Security) -> S
             Security::High => panic!("ERROR: program stops"),
         };
     }
-
     server.ok().unwrap_or_else(|| "".to_string())
 }
