@@ -26,4 +26,10 @@ fn main() {
 
     form_output.password = String::from("asdasASd123SA");
     println!("{:?}", form_output.validate().unwrap_err());
+
+    form_output.password = String::from("dsaSD&%DF!?=");
+    println!("{:?}", form_output.validate().unwrap_err());
+
+    form_output.password = String::from("dsGE1SAD213");
+    println!("{:?}", form_output.validate().unwrap_err());
 }
