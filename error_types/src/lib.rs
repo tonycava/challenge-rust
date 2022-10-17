@@ -77,6 +77,7 @@ impl Form {
         }
 
         println!("{passwd}");
+        println!("{}", String::from(&self.first_name));
 
         Ok(vec!["Valid first name", "Valid password"])
     }
