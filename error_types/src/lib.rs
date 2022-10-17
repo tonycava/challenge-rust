@@ -1,13 +1,11 @@
 use chrono::{NaiveDate, Utc};
 
-// this will be the structure that wil handle the errors
 #[derive(Debug, Eq, PartialEq)]
 pub struct FErr {
-    form_values: (String, String),
-    date: String,
-    err: String,
+    pub form_values: (String, String),
+    pub date: String,
+    pub err: String,
 }
-
 
 impl FErr {
     pub fn new(form_values: (String, String), date: String, err: String) -> FErr {
@@ -41,8 +39,6 @@ pub fn create_date(date: &str) -> NaiveDate {
     NaiveDate::parse_from_str(date, "%Y-%m-%d").unwrap()
 }
 
-
-
 impl Form {
     pub fn new(
         first_name: String,
@@ -68,6 +64,7 @@ impl Form {
         if passwd == "asdasASd123SA" {
             return Err(FErr::new((String::from("password"), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "Combination of different ASCII character types (numbers, letters and none alphanumeric characters)".to_string()));
         }
+
         if self.password.len() < 8 {
             return Err(FErr::new((String::from(&self.first_name), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "At least 8 characters".to_string()));
         } else if self.first_name == "" {
