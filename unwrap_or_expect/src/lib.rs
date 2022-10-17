@@ -1,5 +1,3 @@
-use std::fmt::format;
-
 #[derive(Debug, PartialEq)]
 pub enum Security {
     Unknown,
@@ -22,10 +20,9 @@ pub fn fetch_data(server: Result<String, String>, security_level: Security) -> S
     if server.clone().err() != None {
         match security_level {
             Security::Unknown => panic!("called `Result::unwrap()` on an `Err` value: \"ERROR CRITICAL\""),
-            Security::Low => format!("Not found: {}", server.unwrap_or_else(|_| "[SERVER_URL]".to_string())),
             Security::Medium => "WARNING: check the server",
             Security::High => panic!("ERROR: program stops"),
-            _ => {}
+            _ => format!("Not found: {}", server.unwrap_or_else(|_| "[SERVER_URL]".to_string())),
         }
     }
 
