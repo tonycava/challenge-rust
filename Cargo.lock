@@ -59,6 +59,7 @@ dependencies = [
  "matrix_transposition",
  "name_initials",
  "ownership",
+ "panic",
  "reverse_string",
  "scalar",
  "simple_hash",
@@ -141,6 +142,10 @@ version = "0.1.0"
 
 [[package]]
 name = "ownership"
+version = "0.1.0"
+
+[[package]]
+name = "panic"
 version = "0.1.0"
 
 [[package]]

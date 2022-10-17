@@ -36,3 +36,4 @@ string_permutation = { path = 'string_permutation' }
 hashing = { path = 'hashing' }
 collect = { path = 'collect' }
 unwrap_or_expect = { path = 'unwrap_or_expect' }
+panic = { path = 'panic' }
