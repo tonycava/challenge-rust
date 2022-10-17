@@ -11,7 +11,9 @@ pub fn fetch_data(server: Result<String, String>, security_level: Security) -> S
     println!("{:?}", server);
     println!("{:?}", security_level);
 
-    if security_level == Security::BlockServer {
+    if security_level == Security::BlockServer
+        && server.unwrap_or("".to_string()) != ""
+        && server.unwrap_err().contains("Ok") {
         panic!("ERROR: program stops")
     }
 
