@@ -1,15 +1,19 @@
-use profanity_filter::*;
+use question_mark::*;
 
 fn main() {
-    let m0 = Message::new("hello there".to_string(), "toby".to_string());
-    println!("{:?}", check_ms(&m0));
+    let a = One {
+        first_layer: Some(Two {
+            second_layer: Some(Three {
+                third_layer: Some(Four {
+                    fourth_layer: Some(1000)
+                })
+            })
+        })
+    };
 
-    let m1 = Message::new("".to_string(), "toby".to_string());
-    println!("{:?}", check_ms(&m1));
-
-    let m2 = Message::new("you are stupid".to_string(), "toby".to_string());
-    println!("{:?}", check_ms(&m2));
-
-    let m3 = Message::new("stupid".to_string(), "toby".to_string());
-    println!("{:?}", check_ms(&m3));
+    // output: 1000
+    println!("{:?}", match a.get_fourth_layer() {
+        Some(e) => e,
+        None => 0
+    })
 }
