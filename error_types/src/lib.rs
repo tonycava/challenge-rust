@@ -66,7 +66,7 @@ impl Form {
         }
 
         if self.password.len() < 8 {
-            return Err(FErr::new((String::from(&self.first_name), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "At least 8 characters".to_string()));
+            return Err(FErr::new((String::from("password"), passwd), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "At least 8 characters".to_string()));
         } else if self.first_name == "" {
             return Err(FErr::new((String::from("first_name"), String::from("")), Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(), "No user name".to_string()));
         } else if
