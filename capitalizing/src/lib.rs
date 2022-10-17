@@ -2,25 +2,25 @@ pub fn capitalize_first(input: &str) -> String {
     if input == "" {
         return "".to_string();
     }
-    let firstChars = input.chars().nth(0).unwrap();
-    if firstChars.is_uppercase() {
+    let first_chars = input.chars().nth(0).unwrap();
+    if first_chars.is_uppercase() {
         return input.to_string();
     }
 
-    let mut allString = String::from(input);
-    allString.remove(0);
-    return firstChars.to_uppercase().to_string() + &allString;
+    let mut all_string = String::from(input);
+    all_string.remove(0);
+    return first_chars.to_uppercase().to_string() + &all_string;
 }
 
 pub fn title_case(input: &str) -> String {
     if input == "" {
         return "".to_string();
     }
-    let allWords: Vec<&str> = input.split(" ").collect();
+    let all_words: Vec<&str> = input.split(" ").collect();
     let mut out: Vec<String> = Vec::new();
-    for word in allWords.iter() {
-        let firstChar = word.chars().nth(0).unwrap();
-        if firstChar.is_uppercase() {
+    for word in all_words.iter() {
+        let first_char = word.chars().nth(0).unwrap();
+        if first_char.is_uppercase() {
             out.push(word.to_string());
             continue;
         }

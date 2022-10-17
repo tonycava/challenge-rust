@@ -1,7 +1,6 @@
 use std::fs;
 use std::fs::File;
-use std::io::{Read, Write};
-use std::ptr::null;
+use std::io::{Write};
 
 pub fn open_or_create(file: &str, content: &str) {
     let str = fs::read_to_string(file).unwrap_or("".to_string());
