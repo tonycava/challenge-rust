@@ -18,12 +18,13 @@ pub fn fetch_data(server: Result<String, String>, security_level: Security) -> S
     }
 
     if server.clone().err() != None {
-        match security_level {
+        let form = format!("Not found: {}", server.unwrap_or("[SERVER_URL]".to_string()));
+        return match security_level {
             Security::Unknown => panic!("called `Result::unwrap()` on an `Err` value: \"ERROR CRITICAL\""),
             Security::Medium => "WARNING: check the server",
             Security::High => panic!("ERROR: program stops"),
-            _ => format!("Not found: {}", server.unwrap_or_else(|_| "[SERVER_URL]".to_string())),
-        }
+            _ => &form,
+        }.to_string();
     }
 
     server.clone().ok().unwrap_or("".to_string())
