@@ -1,13 +1,11 @@
 use std::collections::HashMap;
 use std::num::ParseFloatError;
-
 #[derive(Debug)]
 pub struct Flag {
     pub short_hand: String,
     pub long_hand: String,
     pub desc: String,
 }
-
 impl Flag {
     pub fn opt_flag(l_h: &str, desc: &str) -> Flag {
         Flag {
@@ -17,13 +15,10 @@ impl Flag {
         }
     }
 }
-
 pub type Callback = fn(&str, &str) -> Result<String, ParseFloatError>;
-
 pub struct FlagsHandler {
     pub flags: HashMap<(String, String), Callback>,
 }
-
 impl FlagsHandler {
     pub fn add_flag(&mut self, flag: (String, String), func: Callback) {
         self.flags.insert((flag.0, flag.1), func);
@@ -35,35 +30,27 @@ impl FlagsHandler {
         }
     }
 }
-
 pub fn div(a: &str, b: &str) -> Result<String, ParseFloatError> {
     let mut res;
-
     match a.parse::<f32>() {
         Ok(num) => res = num,
         Err(error) => return Err(error),
     };
-
     match b.parse::<f32>() {
         Ok(num) => res = res / num,
         Err(error) => return Err(error),
     };
-
     Ok(res.to_string())
 }
-
 pub fn rem(a: &str, b: &str) -> Result<String, ParseFloatError> {
     let mut res;
-
     match a.parse::<f32>() {
         Ok(num) => res = num,
         Err(error) => return Err(error),
     };
-
     match b.parse::<f32>() {
         Ok(num) => res %= num,
         Err(error) => return Err(error),
     };
-
     Ok(res.to_string())
 }
