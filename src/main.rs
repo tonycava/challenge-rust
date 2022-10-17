@@ -1,15 +1,15 @@
-use std::fs::File;
-use std::io::Read;
-use handling::*;
+use profanity_filter::*;
 
 fn main() {
-    let path = "a.txt";
-    File::create(path).unwrap();
-    open_or_create(path, "content to be written");
+    let m0 = Message::new("hello there".to_string(), "toby".to_string());
+    println!("{:?}", check_ms(&m0));
 
-    let mut file = File::open(path).unwrap();
+    let m1 = Message::new("".to_string(), "toby".to_string());
+    println!("{:?}", check_ms(&m1));
 
-    let mut s = String::new();
-    file.read_to_string(&mut s).unwrap();
-    println!("{}", s);
+    let m2 = Message::new("you are stupid".to_string(), "toby".to_string());
+    println!("{:?}", check_ms(&m2));
+
+    let m3 = Message::new("stupid".to_string(), "toby".to_string());
+    println!("{:?}", check_ms(&m3));
 }

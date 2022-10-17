@@ -38,3 +38,4 @@ collect = { path = 'collect' }
 unwrap_or_expect = { path = 'unwrap_or_expect' }
 panic = { path = 'panic' }
 handling = { path = 'handling' }
+profanity_filter = { path = 'profanity_filter' }

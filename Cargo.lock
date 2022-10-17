@@ -61,6 +61,7 @@ dependencies = [
  "name_initials",
  "ownership",
  "panic",
+ "profanity_filter",
  "reverse_string",
  "scalar",
  "simple_hash",
@@ -151,6 +152,10 @@ version = "0.1.0"
 
 [[package]]
 name = "panic"
+version = "0.1.0"
+
+[[package]]
+name = "profanity_filter"
 version = "0.1.0"
 
 [[package]]
