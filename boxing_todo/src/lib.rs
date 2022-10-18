@@ -30,9 +30,7 @@ impl TodoList {
         if buff == "" {
             return Err(Box::new(ParseErr::Empty));
         }
-
         let res = json::parse(&buff);
-
         return match res {
             Ok(v) => {
                 let mut tasks: Vec<Task> = Vec::new();
@@ -42,18 +40,17 @@ impl TodoList {
                     tasks.push(Task {
                         id: v["tasks"][task]["id"].clone().to_string().parse::<i32>().unwrap() as u32,
                         description: v["tasks"][task]["description"].clone().to_string(),
-                        level: v["tasks"][task]["level"].clone().to_string().parse::<i32>().unwrap() as u32
+                        level: v["tasks"][task]["level"].clone().to_string().parse::<i32>().unwrap() as u32,
                     });
-
                 }
                 Ok(TodoList {
                     title,
                     tasks,
                 })
-            },
+            }
             Err(e) => Err(Box::new(ParseErr::Malformed(Box::new(ReadErr {
                 child_err: Box::new(e)
-            }))))
+            }).child_err)))
         };
     }
 }

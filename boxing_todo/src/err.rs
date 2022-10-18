@@ -42,9 +42,6 @@ impl Error for ParseErr {
 
 impl Error for ReadErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        if Some(self).unwrap().to_string() == "" {
-            return None;
-        }
         return Some(self);
     }
 }
