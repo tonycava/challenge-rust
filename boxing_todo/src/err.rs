@@ -31,7 +31,8 @@ impl Error for ParseErr {
         let contents = fs::read_to_string("hello.txt")
             .expect("Should have been able to read the file");
 
-        if self.to_string() == "Fail to parses todo" || contents == "empty_tasks.json" {
+        println!("{contents}");
+        if self.to_string() != "Fail to parses todo" || contents == "empty_tasks.json" {
             return None;
         }
         return Some(self);
