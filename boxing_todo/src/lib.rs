@@ -23,9 +23,12 @@ pub struct TodoList {
 
 impl TodoList {
     pub fn get_todo(path: &str) -> Result<TodoList, Box<dyn Error>> {
-        let mut another = File::open(path).unwrap();
+        let mut another = File::open(path);
+        if another.is_err() {
+            return Err(Box::new(another.err().unwrap()));
+        }
         let mut buff = String::from("");
-        another.read_to_string(&mut buff).unwrap();
+        another.unwrap().read_to_string(&mut buff).unwrap();
 
         if buff == "" {
             return Err(Box::new(ParseErr::Empty));
@@ -49,7 +52,7 @@ impl TodoList {
                 })
             }
             Err(e) => Err(Box::new(ParseErr::Malformed(Box::new(ReadErr {
-                child_err: Box::new(e)
+                child_err: Box::from(e)
             }).child_err)))
         };
     }
