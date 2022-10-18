@@ -35,6 +35,7 @@
       <sourceFolder url="file://$MODULE_DIR$/profanity_filter/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/question_mark/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/banner/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/boxing_todo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/cipher/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/error_types/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
@@ -72,6 +73,7 @@
       <excludeFolder url="file://$MODULE_DIR$/banner/target" />
       <excludeFolder url="file://$MODULE_DIR$/cipher/target" />
       <excludeFolder url="file://$MODULE_DIR$/error_types/target" />
+      <excludeFolder url="file://$MODULE_DIR$/boxing_todo/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
