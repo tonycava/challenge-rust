@@ -1,8 +1,6 @@
 pub use std::fmt;
 pub use std::fmt::{Debug, Display};
 pub use std::error::Error;
-use std::fmt::Formatter;
-use std::fs;
 
 #[derive(Debug)]
 pub enum ParseErr {
@@ -24,11 +22,9 @@ impl Display for ParseErr {
     }
 }
 
-
-
 impl Error for ParseErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        if self.to_string() != "Fail to parses todo" || format!("{:?}", self) == "Empty" {
+        if format!("{:?}", self) == "Empty" {
             return None;
         }
         return Some(self);
