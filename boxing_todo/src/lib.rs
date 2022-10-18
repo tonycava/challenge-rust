@@ -27,7 +27,7 @@ impl TodoList {
 
         let another = File::open(path);
         if another.is_err() {
-            let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file Some(Os { code: 2, kind: NotFound, message: \"No such file or directory\" })");
+            let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file");
             return Err(Box::from(custom_error));
         }
         let mut buff = String::from("");
