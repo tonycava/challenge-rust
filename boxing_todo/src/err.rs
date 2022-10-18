@@ -33,16 +33,16 @@ impl Display for ReadErr {
 
 impl Error for ParseErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        if Some(self).unwrap().to_string() == "Fail to parses todo" {
+        if Some(self).unwrap().to_string() != "Fail to parses todo" {
             return None;
         }
-        println!("la");
         return Some(self);
     }
 }
 
 impl Error for ReadErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
+        println!("la");
         return Some(self);
     }
 }
