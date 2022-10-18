@@ -1,5 +1,5 @@
 pub use std::error::Error;
-use std::fmt::{Formatter, write};
+use std::fmt::Debug;
 pub use std::fs::File;
 pub use std::io::Read;
 
@@ -22,7 +22,7 @@ pub struct TodoList {
 
 impl TodoList {
     pub fn get_todo(path: &str) -> Result<TodoList, Box<dyn Error>> {
-        let mut another = File::open(path);
+        let another = File::open(path);
         if another.is_err() {
             return Err(Box::new(ParseErr::Malformed(Box::from(another.err().unwrap()))));
         }
