@@ -1,9 +1,7 @@
 pub use std::error::Error;
-use std::fmt::{Display, Formatter, write};
+use std::fmt::{Formatter, write};
 pub use std::fs::File;
 pub use std::io::Read;
-use std::process::id;
-use json::JsonValue;
 
 pub mod err;
 
