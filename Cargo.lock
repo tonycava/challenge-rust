@@ -115,6 +115,8 @@ dependencies = [
  "question_mark",
  "reverse_string",
  "scalar",
+ "serde",
+ "serde_json",
  "simple_hash",
  "speed_transformation",
  "string_literals",

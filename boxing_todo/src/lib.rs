@@ -1,11 +1,10 @@
-use std::error::Error;
-use serde::{Deserialize, Serialize};
-use std::fs::File;
-use std::io::Read;
+pub use std::error::Error;
+pub use serde::{Deserialize, Serialize};
+pub use std::fs::File;
+pub use std::io::Read;
 
-mod err;
-
-use err::{ParseErr, ReadErr};
+pub mod err;
+pub use err::{ParseErr, ReadErr};
 
 #[derive(Serialize, Deserialize)]
 #[derive(Debug, Eq, PartialEq)]

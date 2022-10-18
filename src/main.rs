@@ -1,4 +1,4 @@
-use boxing_todo::TodoList;
+pub use boxing_todo::TodoList;
 
 fn main() {
     let todos = TodoList::get_todo("boxing_todo/src/todo.json");

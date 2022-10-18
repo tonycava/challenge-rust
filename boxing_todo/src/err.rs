@@ -1,6 +1,6 @@
-use std::fmt;
-use std::fmt::{Debug, Display, Formatter};
-use std::error::Error;
+pub use std::fmt;
+pub use std::fmt::{Debug, Display};
+pub use std::error::Error;
 
 #[derive(Debug)]
 pub enum ParseErr {
@@ -33,13 +33,16 @@ impl Display for ReadErr {
 
 impl Error for ParseErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
+        if Some(self).unwrap().to_string() == "Fail to parses todo" {
+            return None;
+        }
         return Some(self);
     }
 }
 
 impl Error for ReadErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        if format!("{:?}", self) != "" {
+        if Some(self).unwrap().to_string() == "" {
             return None;
         }
         return Some(self);
