@@ -24,10 +24,6 @@ pub struct TodoList {
 impl TodoList {
     pub fn get_todo(path: &str) -> Result<TodoList, Box<dyn Error>> {
         println!("{path}");
-        let mut file = File::create("hello.txt")
-            .expect("Error encountered while creating file!");
-        file.write_all(path.as_bytes())
-            .expect("Error while writing to file");
 
         let another = File::open(path);
         if another.is_err() {

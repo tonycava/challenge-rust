@@ -28,11 +28,7 @@ impl Display for ParseErr {
 
 impl Error for ParseErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        let contents = fs::read_to_string("hello.txt")
-            .expect("Should have been able to read the file");
-
-        println!("{contents}");
-        if self.to_string() != "Fail to parses todo" || contents == "empty_tasks.json" {
+        if self.to_string() != "Fail to parses todo" || format!("{:?}", self) == "Empty" {
             return None;
         }
         return Some(self);
