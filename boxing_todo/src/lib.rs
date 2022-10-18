@@ -47,9 +47,11 @@ impl TodoList {
                         level: v["tasks"][task]["level"].clone().to_string().parse::<i32>().unwrap() as u32,
                     });
                 }
+
                 if tasks.len() == 0 {
                     return Err(Box::new(ParseErr::Empty));
                 }
+
                 Ok(TodoList {
                     title,
                     tasks,

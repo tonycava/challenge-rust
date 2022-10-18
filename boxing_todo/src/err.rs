@@ -1,6 +1,7 @@
 pub use std::fmt;
 pub use std::fmt::{Debug, Display};
 pub use std::error::Error;
+use std::fmt::Formatter;
 
 #[derive(Debug)]
 pub enum ParseErr {
@@ -16,24 +17,17 @@ pub struct ReadErr {
 impl Display for ParseErr {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            ParseErr::Empty => write!(f, "Fail to read todo"),
-            ParseErr::Malformed(_e) => write!(f, "Fail to parses todo"),
+            ParseErr::Empty => write!(f, "Fail to parses todo"),
+            ParseErr::Malformed(_e) => write!(f, "Fail to parses todo\\"),
         }
     }
 }
 
-impl Display for ReadErr {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        if self.child_err.to_string() != "" {
-            return write!(f, "Fail to parse todo");
-        }
-        write!(f, "Fail to parses todo file")
-    }
-}
+
 
 impl Error for ParseErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        if self.to_string() == "Fail to read todo" {
+        if self.to_string() == "Fail to parses todo" {
             return None;
         }
         return Some(self);
