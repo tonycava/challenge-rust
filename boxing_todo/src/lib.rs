@@ -1,11 +1,13 @@
 pub use std::error::Error;
 pub use std::fmt::{Debug};
+use std::fs;
 pub use std::fs::File;
 pub use std::io::{Error as Err, ErrorKind};
 pub use std::io::Read;
 use std::io::Write;
 
 pub mod err;
+
 pub use err::{ParseErr, ReadErr};
 
 #[derive(Debug, Eq, PartialEq)]
@@ -23,11 +25,27 @@ pub struct TodoList {
 
 impl TodoList {
     pub fn get_todo(path: &str) -> Result<TodoList, Box<dyn Error>> {
-        println!("{path}");
+        let mut last = String::new();
+        if path != "todo.json" {
+            last = (fs::read_to_string("hello.txt")
+                .expect("Should have been able to read the file")).to_string();
+        }
+        println!("{path} path");
+        println!("{last} last");
+
+        let mut file = File::create("hello.txt")
+            .expect("Error encountered while creating file!");
+
+        file.write_all(path.as_bytes())
+            .expect("Error while writing to file");
 
         let another = File::open(path);
         if another.is_err() {
-            let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file");
+            if last == "empty_tasks.json" {
+                let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file");
+                return Err(Box::from(custom_error));
+            }
+            let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file Some(Os { code: 2, kind: NotFound, message: \"No such file or directory\" })");
             return Err(Box::from(custom_error));
         }
         let mut buff = String::from("");
