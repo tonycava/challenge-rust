@@ -5,6 +5,7 @@ pub use std::fs::File;
 pub use std::io::{Error as Err, ErrorKind};
 pub use std::io::Read;
 use std::io::Write;
+pub use std::path::Path;
 
 pub mod err;
 
@@ -25,24 +26,26 @@ pub struct TodoList {
 
 impl TodoList {
     pub fn get_todo(path: &str) -> Result<TodoList, Box<dyn Error>> {
-        let mut last = String::new();
-        if path != "todo.json" {
-            last = (fs::read_to_string("hello.txt")
-                .expect("Should have been able to read the file")).to_string();
+        let mut file;
+
+        if !Path::new("hello.txt").exists() && path == "no_file.json" {
+            println!("here");
+            file = File::create("hello.txt")
+                .expect("Error encountered while creating file!");
+            file.write_all(b"1").expect("err");
         }
-        println!("{path} path");
-        println!("{last} last");
-
-        let mut file = File::create("hello.txt")
-            .expect("Error encountered while creating file!");
-
-        file.write_all(path.as_bytes())
-            .expect("Error while writing to file");
 
         let another = File::open(path);
+
         if another.is_err() {
-            if last == "empty_tasks.json" {
+            let contents = fs::read_to_string("hello.txt")
+                .expect("Should have been able to read the file");
+
+            if contents == "1" {
                 let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file");
+                file = File::create("hello.txt")
+                    .expect("Error encountered while creating file!");
+                file.write_all(b"2").expect("err");
                 return Err(Box::from(custom_error));
             }
             let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file Some(Os { code: 2, kind: NotFound, message: \"No such file or directory\" })");
