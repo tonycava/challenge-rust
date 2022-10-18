@@ -1,12 +1,13 @@
 pub use std::error::Error;
-pub use serde::{Deserialize, Serialize};
+use std::fmt::{Display, Formatter, write};
 pub use std::fs::File;
 pub use std::io::Read;
+use json::JsonValue;
 
 pub mod err;
+
 pub use err::{ParseErr, ReadErr};
 
-#[derive(Serialize, Deserialize)]
 #[derive(Debug, Eq, PartialEq)]
 pub struct Task {
     pub id: u32,
@@ -14,7 +15,6 @@ pub struct Task {
     pub level: u32,
 }
 
-#[derive(Serialize, Deserialize)]
 #[derive(Debug, Eq, PartialEq)]
 pub struct TodoList {
     pub title: String,
@@ -31,13 +31,26 @@ impl TodoList {
             return Err(Box::new(ParseErr::Empty));
         }
 
-        let res = serde_json::from_str::<TodoList>(&buff);
+        let res = json::parse(&buff);
 
         return match res {
-            Ok(v) => Ok(TodoList {
-                title: v.title,
-                tasks: v.tasks,
-            }),
+            Ok(v) => {
+                let mut tasks: Vec<Task> = Vec::new();
+                let title = v["title"].to_string();
+
+                for task in 0..v["tasks"].len() {
+                    tasks.push(Task {
+                        id: v["tasks"][task]["id"].clone().to_string().parse::<i32>().unwrap() as u32,
+                        description: v["tasks"][task]["description"].clone().to_string(),
+                        level: v["tasks"][task]["level"].clone().to_string().parse::<i32>().unwrap() as u32
+                    });
+
+                }
+                Ok(TodoList {
+                    title,
+                    tasks,
+                })
+            },
             Err(e) => Err(Box::new(ParseErr::Malformed(Box::new(ReadErr {
                 child_err: Box::new(e)
             }))))
