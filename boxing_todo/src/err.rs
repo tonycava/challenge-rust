@@ -27,7 +27,7 @@ impl Display for ReadErr {
         if self.child_err.to_string() != "" {
             return write!(f, "Fail to parse todo");
         }
-        write!(f, "Fail to read todo file")
+        write!(f, "Fail to parses todo file")
     }
 }
 
