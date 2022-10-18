@@ -1,11 +1,10 @@
-use std::error::Error;
-use std::fmt::{Debug};
+pub use std::error::Error;
+pub use std::fmt::{Debug};
 pub use std::fs::File;
-use std::io::{Error as Err, ErrorKind};
+pub use std::io::{Error as Err, ErrorKind};
 pub use std::io::Read;
 
 pub mod err;
-
 pub use err::{ParseErr, ReadErr};
 
 #[derive(Debug, Eq, PartialEq)]
