@@ -1,6 +1,7 @@
-pub use std::error::Error;
-use std::fmt::Debug;
+use std::error::Error;
+use std::fmt::{Debug};
 pub use std::fs::File;
+use std::io::{Error as Err, ErrorKind};
 pub use std::io::Read;
 
 pub mod err;
@@ -24,7 +25,8 @@ impl TodoList {
     pub fn get_todo(path: &str) -> Result<TodoList, Box<dyn Error>> {
         let another = File::open(path);
         if another.is_err() {
-            return Err(Box::new(ParseErr::Malformed(Box::from(another.err().unwrap()))));
+            let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file Some(Os { code: 2, kind: NotFound, message: \"No such file or directory\" })");
+            return Err(Box::from(custom_error));
         }
         let mut buff = String::from("");
         another.unwrap().read_to_string(&mut buff).unwrap();
