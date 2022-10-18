@@ -16,8 +16,8 @@ pub struct ReadErr {
 impl Display for ParseErr {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            ParseErr::Empty => write!(f, "Fail to parses todo"),
-            ParseErr::Malformed(e) => write!(f, "Fail to parse todo"),
+            ParseErr::Empty => write!(f, "Fail to parse todo"),
+            ParseErr::Malformed(e) => write!(f, "Fail to read todo file"),
         }
     }
 }
@@ -33,7 +33,7 @@ impl Display for ReadErr {
 
 impl Error for ParseErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        if Some(self).unwrap().to_string() == "Fail to parses todo" {
+        if Some(self).unwrap().to_string() == "Fail to parse todo" {
             return None;
         }
         return Some(self);

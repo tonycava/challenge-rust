@@ -2,6 +2,7 @@ pub use std::error::Error;
 use std::fmt::{Display, Formatter, write};
 pub use std::fs::File;
 pub use std::io::Read;
+use std::process::id;
 use json::JsonValue;
 
 pub mod err;
@@ -45,6 +46,9 @@ impl TodoList {
                         description: v["tasks"][task]["description"].clone().to_string(),
                         level: v["tasks"][task]["level"].clone().to_string().parse::<i32>().unwrap() as u32,
                     });
+                }
+                if tasks.len() == 0 {
+                    return Err(Box::new(ParseErr::Empty));
                 }
                 Ok(TodoList {
                     title,
