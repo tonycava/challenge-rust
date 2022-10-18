@@ -24,7 +24,7 @@ impl TodoList {
     pub fn get_todo(path: &str) -> Result<TodoList, Box<dyn Error>> {
         let mut another = File::open(path);
         if another.is_err() {
-            return Err(Box::new(another.err().unwrap()));
+            return Err(Box::new(ParseErr::Malformed(Box::from(another.err().unwrap()))));
         }
         let mut buff = String::from("");
         another.unwrap().read_to_string(&mut buff).unwrap();
