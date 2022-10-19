@@ -73,7 +73,7 @@ pub fn volume_fit(
     println!("a: {a}");
     println!("b: {b}");
     println!("c: {c}");
-
+    if times == 0 { return true }
     return match objects {
         GeometricalVolumes::Cube => {
             let rect = rectangle_area(x, y);
