@@ -10,6 +10,7 @@ pub fn area_fit(
     a: usize,
     b: usize,
 ) -> bool {
+    println!("area here !!!!!");
     println!("{x}");
     println!("{y}");
     println!("{:?}", objects);
