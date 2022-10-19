@@ -1,4 +1,5 @@
 pub use chrono::{Datelike, DateTime, Local, NaiveDate, Weekday as wd};
+pub use error_types::Utc;
 
 pub fn middle_day(year: usize) -> Option<wd> {
     if year % 2 == 0 { return None; }
