@@ -38,11 +38,14 @@ pub fn area_fit(
         GeometricalShapes::Rectangle => {
             let rect = rectangle_area(x, y);
             let area = rectangle_area(a, b);
-            if area >= rect * times {
+
+
+            if area <= rect * times {
                 return true;
             }
             false
         }
+
         GeometricalShapes::Triangle => {
             let rect = rectangle_area(x, y);
             let area = triangle_area(a, b);
