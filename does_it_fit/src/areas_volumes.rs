@@ -6,6 +6,7 @@ pub enum GeometricalShapes {
     Triangle,
 }
 
+#[derive(Debug)]
 pub enum GeometricalVolumes {
     Cube,
     Sphere,

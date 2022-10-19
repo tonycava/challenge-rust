@@ -11,12 +11,12 @@ pub fn area_fit(
     b: usize,
 ) -> bool {
     println!("area here !!!!!");
-    println!("{x}");
-    println!("{y}");
-    println!("{:?}", objects);
-    println!("{times}");
-    println!("{a}");
-    println!("{b}");
+    println!("x: {x}");
+    println!("y: {y}");
+    println!("obj: {:?}", objects);
+    println!("times: {times}");
+    println!("a: {a}");
+    println!("b: {b}");
 
     return match objects {
         GeometricalShapes::Square => {
@@ -64,5 +64,56 @@ pub fn volume_fit(
     b: usize,
     c: usize,
 ) -> bool {
-    false
+    println!("volume here !!!!!");
+    println!("x: {x}");
+    println!("y: {y}");
+    println!("z: {z}");
+    println!("obj: {:?}", objects);
+    println!("times: {times}");
+    println!("a: {a}");
+    println!("b: {b}");
+    println!("c: {c}");
+
+    return match objects {
+        GeometricalVolumes::Cube => {
+            let rect = rectangle_area(x, y);
+            let area = cube_volume(a);
+            if area <= rect * times {
+                return true;
+            }
+            false
+        }
+        GeometricalVolumes::Sphere => {
+            let rect = rectangle_area(x, y);
+            let area = sphere_volume(a);
+            if area >= rect as f64 * times as f64 {
+                return true;
+            }
+            false
+        }
+        GeometricalVolumes::Cone => {
+            let rect = rectangle_area(x, y);
+            let area = cone_volume(a, b);
+            if area >= (rect * times) as f64 {
+                return true;
+            }
+            false
+        }
+        GeometricalVolumes::Pyramid => {
+            let rect = rectangle_area(x, y);
+            let area = triangular_pyramid_volume(a as f64, b);
+            if area <= rect as f64 * times as f64 {
+                return true;
+            }
+            false
+        }
+        GeometricalVolumes::Parallelepiped => {
+            let rect = rectangle_area(x, y);
+            let area = parallelepiped_volume(a, b, c);
+            if area <= rect * times {
+                return true;
+            }
+            false
+        }
+    };
 }
