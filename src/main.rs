@@ -1,7 +1,6 @@
-pub use middle_day::*;
-pub use chrono::{NaiveDate, Weekday as wd};
-pub use chrono::TimeZone;
-pub use error_types::Utc;
+pub use chrono::{Datelike, DateTime, Local, NaiveDate, Weekday as wd};
+pub use chrono::{TimeZone, Utc};
+pub use middle_day::middle_day;
 
 fn main() {
     let date = Utc.ymd(2011, 12, 2).and_hms(21, 12, 09);
