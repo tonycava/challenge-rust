@@ -12,7 +12,7 @@ pub fn area_fit(
 ) -> bool {
     println!("{x}");
     println!("{y}");
-    println!("{:?}", times);
+    println!("{:?}", objects);
     println!("{times}");
     println!("{a}");
     println!("{b}");
