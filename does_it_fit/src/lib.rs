@@ -112,7 +112,7 @@ pub fn volume_fit(
         GeometricalVolumes::Parallelepiped => {
             let rect = rectangle_area(x, y);
             let area = parallelepiped_volume(a, b, c);
-            if area <= rect * times {
+            if area >= rect * times {
                 return true;
             }
             false
