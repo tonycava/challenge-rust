@@ -38,6 +38,7 @@
       <sourceFolder url="file://$MODULE_DIR$/boxing_todo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/cipher/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/error_types/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/middle_day/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/scalar/target" />
       <excludeFolder url="file://$MODULE_DIR$/temperature_conv/target" />
@@ -74,6 +75,7 @@
       <excludeFolder url="file://$MODULE_DIR$/cipher/target" />
       <excludeFolder url="file://$MODULE_DIR$/error_types/target" />
       <excludeFolder url="file://$MODULE_DIR$/boxing_todo/target" />
+      <excludeFolder url="file://$MODULE_DIR$/middle_day/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

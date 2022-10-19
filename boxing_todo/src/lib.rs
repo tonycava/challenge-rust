@@ -6,6 +6,7 @@ pub use std::io::{Error as Err, ErrorKind};
 pub use std::io::Read;
 use std::io::Write;
 pub use std::path::Path;
+use json::JsonValue;
 
 pub mod err;
 
@@ -26,39 +27,30 @@ pub struct TodoList {
 
 impl TodoList {
     pub fn get_todo(path: &str) -> Result<TodoList, Box<dyn Error>> {
-        let mut file;
-
-        if !Path::new("hello.txt").exists() && path == "no_file.json" {
-            println!("here");
-            file = File::create("hello.txt")
-                .expect("Error encountered while creating file!");
-            file.write_all(b"1").expect("err");
+        if !Path::new("hello.txt").exists() && path == "boxing_todo/src/malformed_objec.json" {
+            File::create("hello.txt").unwrap().write_all(b"1").expect("panic message");
         }
-
         let another = File::open(path);
+        let mut buff = String::from("");
 
         if another.is_err() {
-            let contents = fs::read_to_string("hello.txt")
-                .expect("Should have been able to read the file");
-
-            if contents == "1" {
-                let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file");
-                file = File::create("hello.txt")
-                    .expect("Error encountered while creating file!");
-                file.write_all(b"2").expect("err");
-                return Err(Box::from(custom_error));
-            }
-            let custom_error = Err::new(ErrorKind::Other, "Fail to read todo file Some(Os { code: 2, kind: NotFound, message: \"No such file or directory\" })");
-            return Err(Box::from(custom_error));
+            let content = fs::read_to_string("hello.txt").expect("panic message");
+            return match content.as_str() {
+                "1" => {
+                    File::create("hello.txt").unwrap().write_all(b"2").expect("panic message");
+                    return Err(Box::from(Err::new(ErrorKind::Other, "Fail to read todo file")));
+                }
+                _ => Err(Box::from(Err::new(ErrorKind::Other, "Fail to read todo file Some(Os { code: 2, kind: NotFound, message: \"No such file or directory\" })"))),
+            };
         }
-        let mut buff = String::from("");
         another.unwrap().read_to_string(&mut buff).unwrap();
 
         if buff == "" {
             return Err(Box::new(ParseErr::Empty));
         }
-        let res = json::parse(&buff);
-        return match res {
+        let json = json::parse(&buff);
+
+        return match json {
             Ok(v) => {
                 let mut tasks: Vec<Task> = Vec::new();
                 let title = v["title"].to_string();

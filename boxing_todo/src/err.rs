@@ -24,9 +24,9 @@ impl Display for ParseErr {
 
 impl Error for ParseErr {
     fn source(&self) -> Option<&(dyn Error + 'static)> {
-        if format!("{:?}", self) == "Empty" {
-            return None;
-        }
-        return Some(self);
+        return match format!("{:?}", self).as_str() {
+            "Empty" => None,
+            _ => Some(self)
+        };
     }
 }

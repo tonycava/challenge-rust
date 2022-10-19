@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
-serde_json = "1.0"
+chrono = "0.4"
 scalar = { path = 'scalar' }
 temperature_conv = { path = 'temperature_conv' }
 speed_transformation = { path = 'speed_transformation' }
@@ -45,3 +45,4 @@ banner = { path = 'banner' }
 cipher = { path = 'cipher' }
 error_types = { path = 'error_types' }
 boxing_todo = { path = 'boxing_todo' }
+middle_day = { path = 'middle_day' }
