@@ -17,5 +17,5 @@ fn main() {
     //     "Does 1 parallelepiped (6 base, 7 height and depth 4) fit in a 5 by 7 by 5 parallelepiped? {}",
     //     volume_fit(5, 7, 5, GeometricalVolumes::Parallelepiped, 1, 6, 7, 4) // true
     // );
-    println!("{}", area_fit(7,3, GeometricalShapes::Rectangle, 2, 2,4))
+    println!("{}", volume_fit(7, 4, 4 , GeometricalVolumes::Cone, 1, 8, 2, 0))
 }

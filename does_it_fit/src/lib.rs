@@ -18,6 +18,7 @@ pub fn area_fit(
     println!("a: {a}");
     println!("b: {b}");
 
+    if times == 0 { return true }
     return match objects {
         GeometricalShapes::Square => {
             let rect = rectangle_area(x, y);
@@ -38,8 +39,6 @@ pub fn area_fit(
         GeometricalShapes::Rectangle => {
             let rect = rectangle_area(x, y);
             let area = rectangle_area(a, b);
-
-
             if area <= rect * times {
                 return true;
             }
@@ -97,7 +96,7 @@ pub fn volume_fit(
         GeometricalVolumes::Cone => {
             let rect = rectangle_area(x, y);
             let area = cone_volume(a, b);
-            if area >= (rect * times) as f64 {
+            if area <= (rect * times) as f64 {
                 return true;
             }
             false
