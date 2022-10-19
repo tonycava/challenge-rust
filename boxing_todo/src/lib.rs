@@ -4,12 +4,10 @@ use std::fs;
 pub use std::fs::File;
 pub use std::io::{Error as Err, ErrorKind};
 pub use std::io::Read;
-use std::io::Write;
+pub use std::io::Write;
 pub use std::path::Path;
-use json::JsonValue;
 
 pub mod err;
-
 pub use err::{ParseErr, ReadErr};
 
 #[derive(Debug, Eq, PartialEq)]

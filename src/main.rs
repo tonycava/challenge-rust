@@ -1,21 +1,20 @@
-pub use chrono::{Datelike, DateTime, Local, NaiveDate, Weekday as wd};
-pub use chrono::{TimeZone, Utc};
-pub use middle_day::middle_day;
+pub use does_it_fit::*;
 
 fn main() {
-    let date = Utc.ymd(2011, 12, 2).and_hms(21, 12, 09);
-
-    assert_eq!(wd::Tue, middle_day(2019).unwrap());
-    assert_eq!(wd::Wed, middle_day(1997).unwrap());
-    assert_eq!(wd::Mon, middle_day(1663).unwrap());
-    assert_eq!(wd::Wed, middle_day(1873).unwrap());
-    assert_eq!(wd::Thu, middle_day(1953).unwrap());
-    assert_eq!(wd::Wed, middle_day(1879).unwrap());
-
-    // println!("{:?}", middle_day(1022).unwrap());
+    println!(
+        "Do 100 rectangles (2x1) fit in a 2 by 4 square? {}",
+        area_fit(2, 4, GeometricalShapes::Rectangle, 100, 2, 1) // false
+    );
+    println!(
+        "Do 3 triangles (5 base and 3 height) fit in a 5 by 5 square? {}",
+        area_fit(5, 5, GeometricalShapes::Triangle, 3, 5, 3) // true
+    );
+    println!(
+        "Do 3 spheres (2 radius) fit in a 5 by 5 by 5 box? {}",
+        volume_fit(5, 5, 5, GeometricalVolumes::Sphere, 3, 2, 0, 0) // true
+    );
+    println!(
+        "Does 1 parallelepiped (6 base, 7 height and depth 4) fit in a 5 by 7 by 5 parallelepiped? {}",
+        volume_fit(5, 7, 5, GeometricalVolumes::Parallelepiped, 1, 6, 7, 4) // true
+    );
 }
-
-
-
-
-

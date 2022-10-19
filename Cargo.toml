@@ -46,3 +46,4 @@ cipher = { path = 'cipher' }
 error_types = { path = 'error_types' }
 boxing_todo = { path = 'boxing_todo' }
 middle_day = { path = 'middle_day' }
+does_it_fit = { path = 'does_it_fit' }
