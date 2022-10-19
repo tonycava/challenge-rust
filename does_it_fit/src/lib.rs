@@ -10,6 +10,13 @@ pub fn area_fit(
     a: usize,
     b: usize,
 ) -> bool {
+    println!("{x}");
+    println!("{y}");
+    println!("{:?}", times);
+    println!("{times}");
+    println!("{a}");
+    println!("{b}");
+
     return match objects {
         GeometricalShapes::Square => {
             let rect = rectangle_area(x, y);
@@ -17,7 +24,7 @@ pub fn area_fit(
             if area <= rect * times {
                 return true;
             }
-            return false;
+            false
         }
         GeometricalShapes::Circle => {
             let rect = rectangle_area(x, y);
@@ -25,7 +32,7 @@ pub fn area_fit(
             if area >= rect as f64 * times as f64 {
                 return true;
             }
-            return false;
+            false
         }
         GeometricalShapes::Rectangle => {
             let rect = rectangle_area(x, y);
@@ -33,7 +40,7 @@ pub fn area_fit(
             if area >= rect * times {
                 return true;
             }
-            return false;
+            false
         }
         GeometricalShapes::Triangle => {
             let rect = rectangle_area(x, y);
@@ -41,9 +48,8 @@ pub fn area_fit(
             if area <= rect as f64 * times as f64 {
                 return true;
             }
-            return false;
+            false
         }
-        _ => false
     };
 }
 
