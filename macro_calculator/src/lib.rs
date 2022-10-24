@@ -26,11 +26,12 @@ pub fn calculate_macros(foods: Vec<Food>) -> json::JsonValue {
     for food in foods.iter()
     {
         final_cals += food.calories[1].replace("kcal", "").parse::<f64>().unwrap() * food.nbr_of_portions;
-        final_carbs += format!("{:.2}", final_carbs).parse::<f64>().unwrap();
+        final_carbs += format!("{:.2}", food.carbs * food.nbr_of_portions).parse::<f64>().unwrap();
         final_proteins += format!("{:.2}", food.proteins * food.nbr_of_portions).parse::<f64>().unwrap();
         final_fats += format!("{:.2}", food.fats * food.nbr_of_portions).parse::<f64>().unwrap();
     }
     final_cals = format!("{:.2}", final_cals).parse::<f64>().unwrap();
+
     let json =
         String::from("{") +
             &format!(r#""cals": {},"carbs": {},"proteins": {},"fats": {}"#, final_cals, final_carbs, final_proteins, final_fats) +
