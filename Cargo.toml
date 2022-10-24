@@ -5,6 +5,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
 chrono = "0.4"
+json = "0.12.4"
 scalar = { path = 'scalar' }
 temperature_conv = { path = 'temperature_conv' }
 speed_transformation = { path = 'speed_transformation' }
@@ -47,3 +48,4 @@ error_types = { path = 'error_types' }
 boxing_todo = { path = 'boxing_todo' }
 middle_day = { path = 'middle_day' }
 does_it_fit = { path = 'does_it_fit' }
+macro_calculator = { path = 'macro_calculator' }
