@@ -1,7 +1,7 @@
-pub use crate::mall::floor::store::employee::Employee;
-pub use crate::mall::floor::store::Store;
-pub use crate::mall::guard::Guard;
-pub use crate::mall::Mall;
+pub use mall::floor::store::employee::Employee;
+pub use mall::floor::store::Store;
+pub use mall::guard::Guard;
+pub use mall::Mall;
 
 pub mod mall;
 
