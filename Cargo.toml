@@ -49,3 +49,4 @@ boxing_todo = { path = 'boxing_todo' }
 middle_day = { path = 'middle_day' }
 does_it_fit = { path = 'does_it_fit' }
 macro_calculator = { path = 'macro_calculator' }
+shopping_mall = { path = 'shopping_mall' }

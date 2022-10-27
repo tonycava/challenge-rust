@@ -1,6 +1,6 @@
-use shopping_mall::*;
-use shopping_mall::mall::floor;
-use shopping_mall::mall::floor::store;
+pub use shopping_mall::*;
+pub use shopping_mall::mall::floor;
+pub use shopping_mall::mall::floor::store;
 
 fn main() {
     let secs = vec![
