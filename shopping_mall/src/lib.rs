@@ -3,10 +3,10 @@ pub use mall::floor;
 pub use mall::floor::*;
 pub use mall::floor::store;
 pub use mall::floor::store::*;
-use crate::employee::Employee;
-use crate::employee::*;
-use crate::guard::Guard;
-use crate::guard::*;
+pub use crate::employee::Employee;
+pub use crate::employee::*;
+pub use crate::guard::Guard;
+pub use crate::guard::*;
 pub use crate::store::Store;
 pub use crate::store::*;
 
