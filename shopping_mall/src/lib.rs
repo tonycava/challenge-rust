@@ -1,7 +1,7 @@
 pub use mall::floor::store::employee::Employee;
 pub use mall::floor::store::Store;
 pub use mall::guard::Guard;
-pub use mall::Mall;
+pub use mall::*;
 
 pub mod mall;
 

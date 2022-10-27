@@ -1,8 +1,6 @@
 pub use shopping_mall::*;
 pub use shopping_mall::mall::floor;
 pub use shopping_mall::mall::floor::store;
-pub use shopping_mall::Store;
-pub use shopping_mall::mall::floor::Floor;
 
 fn main() {
     let secs = vec![
@@ -59,8 +57,8 @@ fn main() {
     ];
 
     let ground_stores = vec![
-        store::Store::new("Footzo", 50, footzo_emp),
-        store::Store::new("Swashion", 43, swashion_emp),
+        Store::new("Footzo", 50, footzo_emp),
+        Store::new("Swashion", 43, swashion_emp),
     ];
     let food_stores = vec![
         store::Store::new("PizBite", 60, pizbite_emp),
