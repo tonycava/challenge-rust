@@ -85,10 +85,10 @@ pub fn check_for_securities(mall: &mut Mall, guard: Vec<Guard>) {
 }
 
 pub fn cut_or_raise(mall: &mut Mall) {
-    for floor in mall.floors.iter() {
-        for store in floor.stores.clone() {
-            for mut employee in store.employees {
-                if employee.working_hours.1 - employee.working_hours.0 >= 10 { employee.salary *= 1.10; } else { employee.salary *= 0.90; }
+    for floor in mall.floors.iter_mut() {
+        for store in floor.stores.iter_mut() {
+            for employee in store.employees.iter_mut() {
+                if employee.working_hours.1 - employee.working_hours.0 > 10 { employee.salary *= 1.1; } else { employee.salary *= 0.90; }
             }
         }
     }
