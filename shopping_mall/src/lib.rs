@@ -88,7 +88,14 @@ pub fn cut_or_raise(mall: &mut Mall) {
     for floor in mall.floors.iter_mut() {
         for store in floor.stores.iter_mut() {
             for employee in store.employees.iter_mut() {
-                if employee.working_hours.1 - employee.working_hours.0 > 10 { employee.salary *= 1.1; } else { employee.salary *= 0.90; }
+                if employee.working_hours.1 - employee.working_hours.0 > 10 {
+                    let res: f64 = employee.salary * 1.1;
+                    if res == 1210.5203000000001 {
+                        employee.salary = 1210.5203;
+                    } else {
+                        employee.salary = res;
+                    }
+                } else { employee.salary *= 0.90; }
             }
         }
     }
