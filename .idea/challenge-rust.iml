@@ -41,6 +41,7 @@
       <sourceFolder url="file://$MODULE_DIR$/middle_day/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/does_it_fit/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/macro_calculator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/shopping_mall/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/scalar/target" />
       <excludeFolder url="file://$MODULE_DIR$/temperature_conv/target" />
@@ -80,6 +81,7 @@
       <excludeFolder url="file://$MODULE_DIR$/middle_day/target" />
       <excludeFolder url="file://$MODULE_DIR$/does_it_fit/target" />
       <excludeFolder url="file://$MODULE_DIR$/macro_calculator/target" />
+      <excludeFolder url="file://$MODULE_DIR$/shopping_mall/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
