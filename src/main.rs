@@ -2,6 +2,9 @@ pub use shopping_mall::*;
 pub use shopping_mall::mall::floor;
 pub use shopping_mall::mall::floor::store;
 
+pub use crate::Store;
+pub use shopping_mall::Store;
+
 fn main() {
     let secs = vec![
         mall::guard::Guard::new("John Oliver", 34, 7),
