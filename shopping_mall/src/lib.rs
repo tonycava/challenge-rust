@@ -65,13 +65,8 @@ pub fn nbr_of_employees(mall: Mall) -> usize {
 pub fn check_for_securities(mall: &mut Mall, guard: Vec<Guard>) {
     let mut square_meters = 0;
     for floor in mall.floors.iter() {
-        for store in floor.stores.iter() {
-            if store.square_meters > square_meters {
-                square_meters += store.square_meters;
-            }
-        }
+        square_meters += floor.size_limit;
     }
-    if square_meters % 200 > 200 {}
     let mut idx = 200;
     let mut scd = 0;
     while idx < square_meters {
