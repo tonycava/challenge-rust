@@ -1,5 +1,7 @@
 pub use shopping_mall::*;
+pub use shopping_mall::mall::*;
 pub use shopping_mall::mall::floor;
+pub use shopping_mall::mall::floor::*;
 pub use shopping_mall::mall::floor::store;
 pub use shopping_mall::mall::floor::store::*;
 pub use crate::Store;
