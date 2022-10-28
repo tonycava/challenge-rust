@@ -1,6 +1,8 @@
 use edit_distance::edit_distance;
 
 pub fn expected_variable(compared: &str, excepted: &str) -> Option<String> {
+    println!("{}", compared);
+    println!("{}", excepted);
     if compared.contains('-') || excepted.contains('-') || compared.contains(' ') || excepted.contains(' ') {
         return None;
     }
