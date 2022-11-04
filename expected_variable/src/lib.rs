@@ -8,13 +8,13 @@ pub fn expected_variable(compared: &str, excepted: &str) -> Option<String> {
         println!("dashes");
         return None;
     }
-    if excepted == compared {
+    if excepted.to_lowercase() == compared.to_lowercase() {
         println!("same");
-        return Some("100%".to_string())
+        return Some("100%".to_string());
     }
     if !compared.is_camel_lowercase() || !compared.is_camel_lowercase() {
         println!("not camel");
-        return None
+        return None;
     }
     if edit_distance(compared, excepted) > excepted.len() {
         println!(">>>>>>>>");
