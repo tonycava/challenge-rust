@@ -4,6 +4,9 @@ use case::*;
 pub fn expected_variable(compared: &str, excepted: &str) -> Option<String> {
     println!("{}", compared);
     println!("{}", excepted);
+    if excepted == compared {
+        return Some("100%".to_string())
+    }
     if !compared.is_camel_lowercase() || !compared.is_camel_lowercase() {
         return None
     }
