@@ -9,7 +9,7 @@ pub fn expected_variable(compared: &str, excepted: &str) -> Option<String> {
     if compared.to_lowercase() == excepted.to_lowercase() {
         return Some("100%".to_string());
     }
-    if edit_distance(compared, excepted) > compared.len() / 2 {
+    if edit_distance(compared, excepted) > excepted.len() {
         return None;
     }
     let dist = edit_distance(compared, excepted);
