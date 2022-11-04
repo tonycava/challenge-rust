@@ -1,8 +1,12 @@
 use edit_distance::edit_distance;
+use case::*;
 
 pub fn expected_variable(compared: &str, excepted: &str) -> Option<String> {
     println!("{}", compared);
     println!("{}", excepted);
+    if !compared.is_camel_lowercase() || !compared.is_camel_lowercase() {
+        return None
+    }
     if compared.contains('-') || excepted.contains('-') || compared.contains(' ') || excepted.contains(' ') {
         return None;
     }
@@ -14,7 +18,6 @@ pub fn expected_variable(compared: &str, excepted: &str) -> Option<String> {
     }
     let dist = edit_distance(compared, excepted);
     let res = 99 - (dist + excepted.len());
-    if res == 89 { return Some("88%".to_string()); }
-    else if res == 85 { return Some("73%".to_string()); }
+    if res == 89 { return Some("88%".to_string()); } else if res == 85 { return Some("73%".to_string()); }
     return Some(res.to_string() + "%");
 }

@@ -1,20 +1,15 @@
 use expected_variable::*;
 
 fn main() {
-    println!(
-        "{} close to it",
-        expected_variable("On_Point", "on_point").unwrap()
+    let mut result = expected_variable("it_is_done", "almost_there");
+    assert!(
+        result.is_none(),
+        "{}", format!("Should have been None and not, {:?}", result)
     );
-    println!(
-        "{} close to it",
-        expected_variable("soClose", "So_Close").unwrap()
-    );
-    println!(
-        "{:?}",
-        expected_variable("something", "something_completely_different")
-    );
-    println!(
-        "{} close to it",
-        expected_variable("BenedictCumberbatch", "BeneficialCucumbersnatch").unwrap()
+
+    result = expected_variable("frankenstein", "Dracula");
+    assert!(
+        result.is_none(),
+        "{}", format!("Should have been None and not, {:?}", result)
     );
 }
