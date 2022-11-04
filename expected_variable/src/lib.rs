@@ -4,19 +4,20 @@ use case::*;
 pub fn expected_variable(compared: &str, excepted: &str) -> Option<String> {
     println!("{}", compared);
     println!("{}", excepted);
+    if compared.contains('-') || excepted.contains('-') || compared.contains(' ') || excepted.contains(' ') {
+        println!("dashes");
+        return None;
+    }
     if excepted == compared {
+        println!("same");
         return Some("100%".to_string())
     }
     if !compared.is_camel_lowercase() || !compared.is_camel_lowercase() {
+        println!("not camel");
         return None
     }
-    if compared.contains('-') || excepted.contains('-') || compared.contains(' ') || excepted.contains(' ') {
-        return None;
-    }
-    if compared.to_lowercase() == excepted.to_lowercase() {
-        return Some("100%".to_string());
-    }
     if edit_distance(compared, excepted) > excepted.len() {
+        println!(">>>>>>>>");
         return None;
     }
     let dist = edit_distance(compared, excepted);
