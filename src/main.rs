@@ -1,4 +1,4 @@
-pub use mobs::{Boss, Mob, Member};
+pub use mob::{Boss, Mob, Member};
 
 
 fn main() {

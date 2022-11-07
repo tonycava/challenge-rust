@@ -118,7 +118,7 @@ dependencies = [
  "macro_calculator",
  "matrix_transposition",
  "middle_day",
- "mobs",
+ "mob",
  "name_initials",
  "ownership",
  "panic",
@@ -375,7 +375,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "mobs"
+name = "mob"
 version = "0.1.0"
 
 [[package]]
