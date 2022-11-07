@@ -1,20 +1,32 @@
-use expected_variable::*;
+pub use mobs::{Boss, Mob, Member};
+
 
 fn main() {
-    println!(
-        "{} close to it",
-        expected_variable("On_Point", "on_point").unwrap()
+    let (mafia1, mafia2) = (
+        Mob {
+            name: "Hairy Giants".to_string(),
+            boss: boss::new("Louie HaHa", 36),
+            cities: vec![("San Francisco".to_string(), 7)],
+            members: vec![
+                member::new("Benny Eggs", member::Role::Soldier, 28),
+                member::new("Jhonny", member::Role::Associate, 17),
+                member::new("Greasy Thumb", member::Role::Soldier, 30),
+                member::new("No Finger", member::Role::Caporegime, 32),
+            ],
+            wealth: 100000,
+        },
+        Mob {
+            name: "Red Thorns".to_string(),
+            boss: boss::new("Big Tuna", 30),
+            cities: vec![("San Jose".to_string(), 5)],
+            members: vec![
+                member::new("Knuckles", member::Role::Soldier, 25),
+                member::new("Baldy Dom", member::Role::Caporegime, 36),
+                member::new("Crazy Joe", member::Role::Underboss, 23),
+            ],
+            wealth: 70000,
+        },
     );
-    println!(
-        "{} close to it",
-        expected_variable("soClose", "So_Close").unwrap()
-    );
-    println!(
-        "{:?}",
-        expected_variable("something", "something_completely_different")
-    );
-    println!(
-        "{} close to it",
-        expected_variable("BenedictCumberbatch", "BeneficialCucumbersnatch").unwrap()
-    );
+
+    println!("{:?}\n{:?}", mafia1, mafia2);
 }

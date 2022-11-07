@@ -43,6 +43,7 @@
       <sourceFolder url="file://$MODULE_DIR$/macro_calculator/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/expected_variable/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/shopping_mall/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mobs/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/scalar/target" />
       <excludeFolder url="file://$MODULE_DIR$/temperature_conv/target" />
@@ -84,6 +85,7 @@
       <excludeFolder url="file://$MODULE_DIR$/macro_calculator/target" />
       <excludeFolder url="file://$MODULE_DIR$/shopping_mall/target" />
       <excludeFolder url="file://$MODULE_DIR$/expected_variable/target" />
+      <excludeFolder url="file://$MODULE_DIR$/mobs/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
