@@ -1,4 +1,4 @@
-pub use mob::{Boss, Mob, Member};
+pub use mobs::{Boss, Mob, Member};
 
 
 fn main() {
@@ -15,6 +15,7 @@ fn main() {
             ],
             wealth: 100000,
         },
+
         Mob {
             name: "Red Thorns".to_string(),
             boss: boss::new("Big Tuna", 30),
