@@ -1,5 +1,5 @@
 use crate::mobs::{Boss, Member, Mob, Role};
-mod mobs;
+pub mod mobs;
 
 impl Boss {
     pub fn new(&self, name: String, age: u8) -> Self {
