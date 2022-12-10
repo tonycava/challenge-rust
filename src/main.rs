@@ -1,10 +1,11 @@
-pub use mobs::mobs::{Boss, Member, Mob, Role};
+use mobs::*;
+use mobs::mob::{boss, member, Mob};
 
 fn main() {
     let (mafia1, mafia2) = (
         Mob {
             name: "Hairy Giants".to_string(),
-            boss: mobs::boss::new("Louie HaHa", 36),
+            boss: boss::new("Louie HaHa", 36),
             cities: vec![("San Francisco".to_string(), 7)],
             members: vec![
                 member::new("Benny Eggs", member::Role::Soldier, 28),
